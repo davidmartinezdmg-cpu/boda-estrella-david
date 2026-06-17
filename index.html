@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La boda de Estrella & David</title>
+  <meta name="description" content="Invitación online de boda de Estrella y David" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cream:#fffaf4;
+      --paper:#fffdf9;
+      --blush:#f5d9d0;
+      --blush-2:#fdece7;
+      --sage:#5d6d4b;
+      --sage-dark:#344226;
+      --olive:#77845f;
+      --gold:#c79a48;
+      --text:#2f3329;
+      --muted:#747064;
+      --line:#eadfd2;
+      --shadow:0 24px 70px rgba(72,54,36,.12);
+      --radius:28px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Montserrat,system-ui,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(245,217,208,.45), transparent 30%),
+        radial-gradient(circle at 100% 20%, rgba(210,225,199,.55), transparent 30%),
+        var(--cream);
+      overflow-x:hidden;
+    }
+    body::before, body::after{
+      content:"";
+      position:fixed;
+      width:360px;height:360px;
+      pointer-events:none;
+      z-index:0;
+      opacity:.5;
+      background:
+        radial-gradient(circle at 30% 30%, #f5b9aa 0 7px, transparent 8px),
+        radial-gradient(circle at 62% 25%, #fff4e8 0 12px, transparent 13px),
+        radial-gradient(circle at 58% 60%, #dfe8d3 0 9px, transparent 10px),
+        radial-gradient(circle at 44% 72%, #f3c9bf 0 6px, transparent 7px);
+      filter:blur(.2px);
+    }
+    body::before{left:-120px;top:70px}
+    body::after{right:-140px;bottom:120px;transform:rotate(180deg)}
+    a{color:inherit}
+    .topbar{
+      position:fixed; top:0; left:0; right:0; z-index:50;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px clamp(18px, 4vw, 56px);
+      background:rgba(255,250,244,.78);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(234,223,210,.75);
+    }
+    .brand{font-family:"Great Vibes",cursive;font-size:30px;color:var(--sage-dark)}
+    .nav{display:flex;gap:22px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:600}
+    .nav a{text-decoration:none;color:var(--sage-dark)}
+    .music-chip{
+      border:1px solid var(--line); background:#fff; border-radius:999px;
+      padding:9px 13px; cursor:pointer; color:var(--sage-dark);
+    }
+    .hero{
+      min-height:100vh;
+      display:grid; place-items:center;
+      padding:120px 22px 70px;
+      position:relative; z-index:1;
+      text-align:center;
+    }
+    .hero-card{
+      width:min(980px,100%);
+      padding:70px clamp(24px, 7vw, 90px);
+      border-radius:42px;
+      background:linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,250,244,.92));
+      box-shadow:var(--shadow);
+      border:1px solid rgba(234,223,210,.8);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card::before,.hero-card::after{
+      content:"✿";
+      position:absolute;
+      font-size:170px;
+      line-height:1;
+      color:rgba(245,185,170,.26);
+      font-family:serif;
+    }
+    .hero-card::before{left:-30px;top:-35px}
+    .hero-card::after{right:-35px;bottom:-55px;transform:rotate(25deg)}
+    .eyebrow{
+      text-transform:uppercase; letter-spacing:.28em; font-size:13px; color:var(--sage);
+      font-weight:700;
+    }
+    h1{
+      font-family:"Great Vibes",cursive;
+      font-size:clamp(78px, 13vw, 158px);
+      line-height:.86;
+      margin:28px 0 12px;
+      font-weight:400;
+      color:var(--sage-dark);
+    }
+    .amp{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:44px;margin:0 0 8px}
+    .date{
+      font-family:"Cormorant Garamond",serif;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      font-weight:700;
+      font-size:20px;
+      margin:26px 0 10px;
+    }
+    .phrase{font-family:"Great Vibes",cursive;font-size:34px;color:var(--sage);margin:10px 0 34px}
+    .cta-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+    .btn{
+      border:0; border-radius:999px; padding:14px 24px;
+      font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      font-size:12px; cursor:pointer; text-decoration:none; display:inline-flex;
+      align-items:center; gap:8px; transition:.2s transform,.2s box-shadow;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--sage-dark);color:#fff;box-shadow:0 12px 26px rgba(52,66,38,.2)}
+    .btn-ghost{background:#fff;color:var(--sage-dark);border:1px solid var(--line)}
+    section{position:relative;z-index:1;padding:76px 22px}
+    .wrap{width:min(1080px,100%);margin:0 auto}
+    .section-title{text-align:center;margin-bottom:34px}
+    .section-title span{color:var(--gold);font-size:18px}
+    h2{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(34px,5vw,56px);
+      margin:8px 0 8px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--sage-dark);
+    }
+    .lead{max-width:720px;margin:0 auto;color:var(--muted);line-height:1.8;text-align:center}
+    .countdown{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px
+    }
+    .timebox{
+      background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px 12px;text-align:center;box-shadow:0 12px 34px rgba(72,54,36,.06)
+    }
+    .num{font-family:"Cormorant Garamond",serif;font-size:48px;color:var(--sage-dark)}
+    .lbl{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--muted);font-weight:700}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+    .card{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 18px 50px rgba(72,54,36,.08);
+    }
+    .icon{font-size:34px;margin-bottom:14px}
+    .card h3{
+      font-family:"Cormorant Garamond",serif;text-transform:uppercase;letter-spacing:.12em;
+      font-size:22px;margin:0 0 12px;color:var(--sage-dark)
+    }
+    .card p{line-height:1.75;color:var(--muted);margin:0 0 14px}
+    .timeline{
+      display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:34px;position:relative
+    }
+    .step{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px 12px;text-align:center}
+    .step strong{display:block;font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--sage-dark)}
+    .step span{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700}
+    .rsvp{
+      background:linear-gradient(135deg, #fff, var(--blush-2));
+      border:1px solid var(--line);
+      border-radius:36px;
+      padding:clamp(24px,5vw,48px);
+      box-shadow:var(--shadow);
+      margin-top:30px;
+    }
+    form{display:grid;gap:18px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;color:var(--sage-dark);margin-bottom:8px}
+    input,select,textarea{
+      width:100%;border:1px solid var(--line);border-radius:18px;background:#fff;
+      padding:15px 16px;font:inherit;color:var(--text);outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .radio-row{display:flex;gap:10px;flex-wrap:wrap}
+    .pill input{display:none}
+    .pill span{
+      display:inline-flex;border:1px solid var(--line);border-radius:999px;background:#fff;
+      padding:13px 18px;cursor:pointer;font-weight:700;color:var(--sage-dark)
+    }
+    .pill input:checked + span{background:var(--sage-dark);color:#fff;border-color:var(--sage-dark)}
+    .small-note{font-size:13px;color:var(--muted);line-height:1.6}
+    .music-box{
+      display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center;
+      background:#fff;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 12px 34px rgba(72,54,36,.06);margin-top:28px
+    }
+    .cover{width:90px;height:90px;border-radius:18px;background:linear-gradient(135deg,var(--sage),var(--blush));display:grid;place-items:center;font-size:34px}
+    .player-title{font-weight:800;color:var(--sage-dark);margin-bottom:8px}
+    .bar{height:8px;border-radius:99px;background:#efe7dd;overflow:hidden}
+    .bar i{display:block;width:42%;height:100%;background:var(--sage)}
+    .footer{
+      background:var(--sage-dark);color:#fff;text-align:center;padding:54px 22px;position:relative;z-index:1
+    }
+    .footer .script{font-family:"Great Vibes",cursive;font-size:56px}
+    .overlay{
+      position:fixed; inset:0; z-index:100;
+      background:linear-gradient(180deg, rgba(255,250,244,.98), rgba(253,236,231,.98));
+      display:grid;place-items:center;text-align:center;padding:24px;
+    }
+    .overlay.hidden{display:none}
+    .enter-card{max-width:640px;background:#fff;border:1px solid var(--line);border-radius:36px;padding:46px;box-shadow:var(--shadow)}
+    .enter-card .script{font-family:"Great Vibes",cursive;font-size:68px;color:var(--sage-dark)}
+    .toast{
+      position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);
+      background:var(--sage-dark);color:#fff;border-radius:999px;padding:14px 22px;z-index:80;
+      transition:.3s;box-shadow:0 16px 40px rgba(0,0,0,.18)
+    }
+    .toast.show{transform:translateX(-50%) translateY(0)}
+    @media(max-width:800px){
+      .nav{display:none}
+      .hero-card{padding:54px 22px}
+      .countdown{grid-template-columns:repeat(2,1fr)}
+      .cards,.grid-2{grid-template-columns:1fr}
+      .timeline{grid-template-columns:repeat(2,1fr)}
+      .music-box{grid-template-columns:64px 1fr}
+      .music-box .btn{grid-column:1/-1;justify-content:center}
+      h1{font-size:88px}
+    }
+  </style>
+</head>
+<body>
+  <audio id="weddingMusic" loop preload="auto">
+    <!-- Cambiad esta URL por vuestro MP3 cuando lo tengáis subido -->
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2dd44f896f.mp3?filename=inspiring-piano-ambient-116199.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="overlay" id="entryOverlay">
+    <div class="enter-card">
+      <div class="eyebrow">Estás invitado/a a nuestra boda</div>
+      <div class="script">Estrella & David</div>
+      <p class="lead">Hemos creado esta invitación online para que tengas toda la información del gran día y puedas confirmar tu asistencia.</p>
+      <br>
+      <button class="btn btn-primary" id="enterBtn">Entrar con música ♪</button>
+      <button class="btn btn-ghost" id="enterSilentBtn">Entrar sin música</button>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">E & D</div>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#boda">La boda</a>
+      <a href="#programa">Programa</a>
+      <a href="#rsvp">Confirmar</a>
+      <a href="#musica">Música</a>
+    </nav>
+    <button class="music-chip" id="musicToggle">♪ Música</button>
+  </header>
+
+  <main id="inicio" class="hero">
+    <div class="hero-card">
+      <div class="eyebrow">¡Nos casamos!</div>
+      <h1>Estrella</h1>
+      <div class="amp">y</div>
+      <h1>David</h1>
+      <div class="date">15 de junio de 2025 · 17:30 h</div>
+      <p class="phrase">Y queremos compartir este día tan especial contigo</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#rsvp">Confirmar asistencia</a>
+        <a class="btn btn-ghost" href="#boda">Ver detalles</a>
+      </div>
+    </div>
+  </main>
+
+  <section>
+    <div class="wrap section-title">
+      <span>✦</span>
+      <h2>Cuenta atrás</h2>
+      <p class="lead">Falta cada vez menos para celebrar juntos.</p>
+      <div class="countdown" id="countdown">
+        <div class="timebox"><div class="num" data-days>00</div><div class="lbl">Días</div></div>
+        <div class="timebox"><div class="num" data-hours>00</div><div class="lbl">Horas</div></div>
+        <div class="timebox"><div class="num" data-minutes>00</div><div class="lbl">Minutos</div></div>
+        <div class="timebox"><div class="num" data-seconds>00</div><div class="lbl">Segundos</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="boda">
+    <div class="wrap">
+      <div class="section-title">
+        <span>✦</span>
+        <h2>La boda</h2>
+        <p class="lead">Después de tantos momentos juntos, hemos decidido dar el siguiente paso. Nos hará muchísima ilusión contar contigo.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">💍</div>
+          <h3>Ceremonia</h3>
+          <p><strong>Iglesia de Santa María</strong><br>Calle Mayor, 1<br>28001 Madrid</p>
+          <a class="btn btn-ghost" target="_blank" href="https://maps.google.com/?q=Iglesia%20de%20Santa%20Mar%C3%ADa%20Madrid">Ver mapa</a>
+        </article>
+        <article class="card">
+          <div class="icon">🥂</div>
+          <h3>Celebración</h3>
+          <p><strong>Finca Los Olivos</strong><br>Camino de los Olivos, 12<br>28120 Madrid</p>
+          <a class="btn btn-ghost" target="_blank" href="https://maps.google.com/?q=Finca%20Los%20Olivos%20Madrid">Cómo llegar</a>
+        </article>
+        <article class="card">
+          <div class="icon">🌿</div>
+          <h3>Dress code</h3>
+          <p>Elegante de tarde. Colores suaves, verdes, tierra y tonos florales son más que bienvenidos.</p>
+          <p class="small-note">Nota: reservamos el blanco para la novia.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="programa">
+    <div class="wrap">
+      <div class="section-title">
+        <span>✦</span>
+        <h2>El día de la boda</h2>
+        <p class="lead">Un pequeño resumen de todo lo que viviremos juntos.</p>
+      </div>
+      <div class="timeline">
+        <div class="step"><strong>17:30</strong><span>Ceremonia</span></div>
+        <div class="step"><strong>18:30</strong><span>Cóctel</span></div>
+        <div class="step"><strong>20:00</strong><span>Cena</span></div>
+        <div class="step"><strong>22:30</strong><span>Baile</span></div>
+        <div class="step"><strong>00:00</strong><span>Tarta</span></div>
+        <div class="step"><strong>01:00</strong><span>Fiesta</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp">
+    <div class="wrap">
+      <div class="section-title">
+        <span>✦</span>
+        <h2>Confirma tu asistencia</h2>
+        <p class="lead">Rellena este formulario para ayudarnos con la organización: asistencia, acompañante, alergias, menú y canciones.</p>
+      </div>
+
+      <div class="rsvp">
+        <form id="rsvpForm">
+          <div>
+            <label>¿Vienes a nuestra boda?</label>
+            <div class="radio-row">
+              <label class="pill"><input type="radio" name="asistencia" value="Sí, allí estaré" required><span>Sí, allí estaré</span></label>
+              <label class="pill"><input type="radio" name="asistencia" value="No podré asistir"><span>No podré asistir</span></label>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <label for="nombre">Tu nombre y apellidos</label>
+              <input id="nombre" name="nombre" placeholder="Ej. Laura García" required>
+            </div>
+            <div>
+              <label for="codigo">Código de invitación</label>
+              <input id="codigo" name="codigo" placeholder="Ej. FAMILIA-23">
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <label for="acompanante">¿Vienes con acompañante?</label>
+              <select id="acompanante" name="acompanante">
+                <option>No</option>
+                <option>Sí, tengo acompañante incluido/a</option>
+                <option>No lo sé todavía</option>
+              </select>
+            </div>
+            <div>
+              <label for="nombreAcompanante">Nombre del acompañante</label>
+              <input id="nombreAcompanante" name="nombreAcompanante" placeholder="Nombre y apellidos">
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <label for="menu">Preferencia de menú</label>
+              <select id="menu" name="menu">
+                <option>Menú estándar</option>
+                <option>Vegetariano</option>
+                <option>Vegano</option>
+                <option>Infantil</option>
+                <option>Sin gluten</option>
+                <option>Otro / lo explico abajo</option>
+              </select>
+            </div>
+            <div>
+              <label for="transporte">¿Necesitas transporte?</label>
+              <select id="transporte" name="transporte">
+                <option>No</option>
+                <option>Sí, ida</option>
+                <option>Sí, vuelta</option>
+                <option>Sí, ida y vuelta</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="alergias">Alergias o intolerancias</label>
+            <textarea id="alergias" name="alergias" placeholder="Cuéntanos si tienes alergias, intolerancias o necesidades especiales."></textarea>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <label for="cancion">Canción que quieres escuchar</label>
+              <input id="cancion" name="cancion" placeholder="Ej. Viva la vida - Coldplay">
+            </div>
+            <div>
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input id="telefono" name="telefono" placeholder="+34 ...">
+            </div>
+          </div>
+
+          <div>
+            <label for="mensaje">Mensaje para los novios</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Déjanos un mensaje bonito :)"></textarea>
+          </div>
+
+          <p class="small-note">En esta demo, al enviar se prepara un email con la respuesta. En la versión final se puede conectar a Google Sheets, Airtable, Firebase o un panel privado.</p>
+          <button class="btn btn-primary" type="submit">Enviar confirmación</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="musica">
+    <div class="wrap">
+      <div class="section-title">
+        <span>✦</span>
+        <h2>Nuestra música</h2>
+        <p class="lead">La web puede abrir con música y también incluir una playlist de Spotify o una lista de canciones elegidas por los invitados.</p>
+      </div>
+      <div class="music-box">
+        <div class="cover">♪</div>
+        <div>
+          <div class="player-title">Estrella & David — Nuestra boda</div>
+          <div class="bar"><i></i></div>
+          <p class="small-note">Canción de entrada, playlist de la fiesta y sugerencias de invitados.</p>
+        </div>
+        <button class="btn btn-primary" id="musicToggle2">Play / pausa</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="script">Estrella & David</div>
+    <p>Gracias por formar parte de nuestra historia.</p>
+  </footer>
+
+  <div class="toast" id="toast">Confirmación preparada</div>
+
+  <script>
+    const weddingDate = new Date("2025-06-15T17:30:00");
+    const $ = (s) => document.querySelector(s);
+    const audio = $("#weddingMusic");
+    const overlay = $("#entryOverlay");
+    const toast = $("#toast");
+
+    function updateCountdown(){
+      const diff = weddingDate - new Date();
+      const safe = Math.max(diff, 0);
+      const days = Math.floor(safe / (1000*60*60*24));
+      const hours = Math.floor((safe / (1000*60*60)) % 24);
+      const minutes = Math.floor((safe / (1000*60)) % 60);
+      const seconds = Math.floor((safe / 1000) % 60);
+      $("[data-days]").textContent = String(days).padStart(2,"0");
+      $("[data-hours]").textContent = String(hours).padStart(2,"0");
+      $("[data-minutes]").textContent = String(minutes).padStart(2,"0");
+      $("[data-seconds]").textContent = String(seconds).padStart(2,"0");
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    async function playMusic(){
+      try { await audio.play(); } catch(e) { console.log("El navegador bloqueó el autoplay hasta interacción."); }
+    }
+    function toggleMusic(){
+      if(audio.paused){ playMusic(); } else { audio.pause(); }
+    }
+    $("#enterBtn").addEventListener("click", () => { overlay.classList.add("hidden"); playMusic(); });
+    $("#enterSilentBtn").addEventListener("click", () => overlay.classList.add("hidden"));
+    $("#musicToggle").addEventListener("click", toggleMusic);
+    $("#musicToggle2").addEventListener("click", toggleMusic);
+
+    $("#rsvpForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      const body = encodeURIComponent(
+`Confirmación boda Estrella & David
+
+Asistencia: ${data.asistencia || ""}
+Nombre: ${data.nombre || ""}
+Código invitación: ${data.codigo || ""}
+Acompañante: ${data.acompanante || ""}
+Nombre acompañante: ${data.nombreAcompanante || ""}
+Menú: ${data.menu || ""}
+Transporte: ${data.transporte || ""}
+Alergias/intolerancias: ${data.alergias || ""}
+Canción sugerida: ${data.cancion || ""}
+Teléfono: ${data.telefono || ""}
+Mensaje: ${data.mensaje || ""}`
+      );
+      toast.classList.add("show");
+      setTimeout(()=>toast.classList.remove("show"), 2500);
+      window.location.href = `mailto:david.martinez.dmg@gmail.com?subject=RSVP boda Estrella y David&body=${body}`;
+    });
+  </script>
+</body>
+</html>
