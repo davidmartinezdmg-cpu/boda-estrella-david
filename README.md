@@ -1,33 +1,51 @@
-# Boda Estrella & David
+# Invitación online de boda — plantilla
 
-Invitación online privada en desarrollo.
+Esta versión está hecha SIN DATOS DEFINITIVOS, con huecos para rellenar.
 
-## Archivos que hay que subir a GitHub
+## Qué subir a GitHub
 
-Sube TODO el contenido de esta carpeta al repositorio:
+Sube estos elementos a la raíz del repositorio:
 
 - index.html
 - css/styles.css
 - js/app.js
-- assets/images/
-- assets/audio/
-- README.md
+- assets/
 
-## Cómo actualizar
+## Dónde cambiar los datos
 
-1. En GitHub, entra en el repositorio.
-2. Pulsa Add file.
-3. Pulsa Upload files.
-4. Arrastra todos los archivos/carpetas de esta carpeta.
-5. Pulsa Commit changes.
+### En index.html
 
-## Publicar más adelante
+Busca textos entre corchetes, por ejemplo:
 
-Cuando la web esté lista:
+- [Nombre 1]
+- [Nombre 2]
+- [DÍA]
+- [MES]
+- [AÑO]
+- [HORA]
+- [Nombre del lugar de la ceremonia]
+- [Dirección]
+- [ENLACE GOOGLE MAPS CEREMONIA]
 
-1. Settings.
-2. Pages.
-3. Deploy from a branch.
-4. Branch: main.
-5. Folder: /root.
-6. Save.
+### En js/app.js
+
+Cambia:
+
+```js
+const weddingDate = new Date("2027-06-15T17:30:00");
+const confirmationEmail = "TU_EMAIL_AQUI@ejemplo.com";
+```
+
+### Música
+
+Sube una canción llamada:
+
+assets/audio/entrada.mp3
+
+Si no subes música, la web funciona igual, solo que no sonará.
+
+### Fotos
+
+Más adelante se pueden añadir fotos en:
+
+assets/images/

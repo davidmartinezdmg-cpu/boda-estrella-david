@@ -3,59 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estrella & David | Nuestra boda</title>
-  <meta name="description" content="Invitación online de boda de Estrella y David" />
+
+  <title>[NOMBRE 1] & [NOMBRE 2] | Invitación de boda</title>
+  <meta name="description" content="Invitación online de boda de [NOMBRE 1] y [NOMBRE 2]" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
   <audio id="music" loop preload="auto">
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2dd44f896f.mp3?filename=inspiring-piano-ambient-116199.mp3" type="audio/mpeg">
+    <!-- Cuando tengáis la canción, subidla a assets/audio/entrada.mp3 y cambiad esta línea -->
+    <source src="assets/audio/entrada.mp3" type="audio/mpeg">
   </audio>
 
   <div class="intro" id="intro">
+    <div class="intro__ornament intro__ornament--left"></div>
+    <div class="intro__ornament intro__ornament--right"></div>
+
     <div class="intro-card">
-      <p class="mini">Estás invitado/a</p>
-      <h1>Estrella <span>&</span> David</h1>
-      <p class="date">15 de junio de 2026</p>
-      <p class="intro-text">Abre nuestra invitación y acompáñanos en el día más especial.</p>
-      <div class="buttons">
-        <button id="enterWithMusic" class="btn primary">Entrar con música</button>
-        <button id="enterWithoutMusic" class="btn secondary">Entrar sin música</button>
+      <p class="eyebrow">Estás invitado/a a nuestra boda</p>
+      <h1>[Nombre 1] <span>&</span> [Nombre 2]</h1>
+      <p class="intro-date">[DÍA] de [MES] de [AÑO]</p>
+      <p class="intro-text">Hemos preparado esta invitación para que tengas toda la información del gran día.</p>
+
+      <div class="button-row">
+        <button id="enterWithMusic" class="btn btn--primary">Entrar con música</button>
+        <button id="enterWithoutMusic" class="btn btn--secondary">Entrar sin música</button>
       </div>
     </div>
   </div>
 
-  <header class="nav">
-    <a href="#inicio" class="logo">E & D</a>
-    <nav>
+  <header class="site-header">
+    <a href="#inicio" class="logo">[N1] & [N2]</a>
+
+    <nav class="desktop-nav">
       <a href="#historia">Historia</a>
       <a href="#boda">La boda</a>
       <a href="#agenda">Agenda</a>
+      <a href="#info">Info</a>
       <a href="#rsvp">Confirmar</a>
     </nav>
-    <button id="musicBtn" class="music">♪</button>
+
+    <button id="musicBtn" class="music-btn" aria-label="Activar o pausar música">♪</button>
   </header>
 
   <main id="inicio" class="hero">
-    <div class="flower flower-left"></div>
-    <div class="flower flower-right"></div>
-    <section class="hero-content reveal">
-      <p class="mini">¡Nos casamos!</p>
-      <h2>Estrella <span>y</span> David</h2>
-      <p class="date">15 de junio de 2026 · 17:30 h</p>
+    <div class="watercolor watercolor--one"></div>
+    <div class="watercolor watercolor--two"></div>
+    <div class="petals" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <section class="hero-card reveal">
+      <p class="eyebrow">¡Nos casamos!</p>
+      <h2>[Nombre 1] <span>y</span> [Nombre 2]</h2>
+      <p class="hero-date">[DÍA] de [MES] de [AÑO] · [HORA] h</p>
       <p class="script">Y queremos compartir este día tan especial contigo</p>
-      <a href="#rsvp" class="btn primary">Confirmar asistencia</a>
+      <a href="#rsvp" class="btn btn--primary">Confirmar asistencia</a>
     </section>
   </main>
 
   <section class="section countdown-section">
     <div class="wrap reveal">
-      <p class="mini">Cuenta atrás</p>
+      <p class="eyebrow">Cuenta atrás</p>
       <h2>Falta muy poco</h2>
+      <p class="lead">Cada día queda menos para celebrar juntos.</p>
+
       <div class="countdown" id="countdown">
         <div><strong data-days>00</strong><span>Días</span></div>
         <div><strong data-hours>00</strong><span>Horas</span></div>
@@ -67,51 +84,61 @@
 
   <section id="historia" class="section">
     <div class="wrap reveal">
-      <p class="mini">Nuestra historia</p>
-      <h2>Todo empezó con un sí</h2>
-      <p class="lead">Después de tantos momentos juntos, hemos decidido dar el siguiente paso. Nos hace muchísima ilusión celebrarlo rodeados de las personas que queremos.</p>
+      <p class="eyebrow">Nuestra historia</p>
+      <h2>Un camino hasta este día</h2>
+      <p class="lead">
+        [Texto breve de bienvenida: por ejemplo, “Después de tantos momentos juntos, hemos decidido dar el siguiente paso y nos encantaría que formaras parte de él.”]
+      </p>
 
-      <div class="story-grid">
-        <article>
+      <div class="story-layout">
+        <article class="story-card">
+          <div class="story-image placeholder">Foto 1</div>
           <span>01</span>
-          <h3>Nos conocimos</h3>
-          <p>Aquí podéis escribir unas líneas sobre vuestro comienzo.</p>
+          <h3>[Cómo nos conocimos]</h3>
+          <p>[Texto de esta parte de vuestra historia.]</p>
         </article>
-        <article>
+
+        <article class="story-card">
+          <div class="story-image placeholder">Foto 2</div>
           <span>02</span>
-          <h3>La aventura</h3>
-          <p>Viajes, planes, risas, momentos y recuerdos que os trajeron hasta aquí.</p>
+          <h3>[Nuestra aventura]</h3>
+          <p>[Texto sobre viajes, momentos o recuerdos importantes.]</p>
         </article>
-        <article>
+
+        <article class="story-card">
+          <div class="story-image placeholder">Foto 3</div>
           <span>03</span>
-          <h3>La pedida</h3>
-          <p>Ese momento que cambió todo y que ahora nos trae a esta celebración.</p>
+          <h3>[La pedida]</h3>
+          <p>[Texto sobre la pedida o el momento en que decidisteis casaros.]</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="boda" class="section blush">
+  <section id="boda" class="section section--blush">
     <div class="wrap reveal">
-      <p class="mini">El gran día</p>
+      <p class="eyebrow">El gran día</p>
       <h2>Detalles de la boda</h2>
+
       <div class="cards">
         <article class="card">
           <div class="icon">💍</div>
           <h3>Ceremonia</h3>
-          <p><strong>Iglesia de Santa María</strong><br>Calle Mayor, 1<br>Madrid</p>
-          <a href="https://maps.google.com/?q=Iglesia%20de%20Santa%20Mar%C3%ADa%20Madrid" target="_blank">Ver mapa</a>
+          <p><strong>[Nombre del lugar de la ceremonia]</strong><br>[Dirección]<br>[Ciudad]</p>
+          <a href="[ENLACE GOOGLE MAPS CEREMONIA]" target="_blank">Ver mapa</a>
         </article>
+
         <article class="card">
           <div class="icon">🥂</div>
           <h3>Celebración</h3>
-          <p><strong>Finca Los Olivos</strong><br>Camino de los Olivos, 12<br>Madrid</p>
-          <a href="https://maps.google.com/?q=Finca%20Los%20Olivos%20Madrid" target="_blank">Cómo llegar</a>
+          <p><strong>[Nombre de la finca/restaurante]</strong><br>[Dirección]<br>[Ciudad]</p>
+          <a href="[ENLACE GOOGLE MAPS CELEBRACIÓN]" target="_blank">Cómo llegar</a>
         </article>
+
         <article class="card">
           <div class="icon">🌿</div>
           <h3>Dress code</h3>
-          <p>Elegante de tarde. Tonos suaves, verdes, tierra y florales son bienvenidos.</p>
+          <p>[Texto sobre el estilo de vestimenta: elegante, formal, colores sugeridos, etc.]</p>
         </article>
       </div>
     </div>
@@ -119,47 +146,69 @@
 
   <section id="agenda" class="section">
     <div class="wrap reveal">
-      <p class="mini">Planning</p>
+      <p class="eyebrow">Planning</p>
       <h2>Agenda del día</h2>
+
       <div class="timeline">
-        <div><strong>17:30</strong><span>Ceremonia</span></div>
-        <div><strong>18:30</strong><span>Cóctel</span></div>
-        <div><strong>20:00</strong><span>Cena</span></div>
-        <div><strong>22:30</strong><span>Baile</span></div>
-        <div><strong>00:00</strong><span>Tarta</span></div>
-        <div><strong>01:00</strong><span>Fiesta</span></div>
+        <div><strong>[Hora]</strong><span>Ceremonia</span></div>
+        <div><strong>[Hora]</strong><span>Cóctel</span></div>
+        <div><strong>[Hora]</strong><span>Cena</span></div>
+        <div><strong>[Hora]</strong><span>Baile</span></div>
+        <div><strong>[Hora]</strong><span>Tarta</span></div>
+        <div><strong>[Hora]</strong><span>Fiesta</span></div>
       </div>
     </div>
   </section>
 
-  <section class="section blush">
+  <section id="info" class="section section--blush">
     <div class="wrap reveal">
-      <p class="mini">Información útil</p>
+      <p class="eyebrow">Información útil</p>
       <h2>Para los invitados</h2>
+
       <div class="info-grid">
-        <div>
+        <article>
           <h3>Autobús</h3>
-          <p>Indícanos en la confirmación si necesitas transporte de ida, vuelta o ambos.</p>
-        </div>
-        <div>
+          <p>[Información sobre transporte, horarios o puntos de recogida.]</p>
+        </article>
+
+        <article>
           <h3>Hoteles</h3>
-          <p>Próximamente añadiremos recomendaciones para quienes vengáis de fuera.</p>
-        </div>
-        <div>
+          <p>[Hoteles recomendados, códigos de reserva o zonas cercanas.]</p>
+        </article>
+
+        <article>
           <h3>Lista de bodas</h3>
-          <p>Vuestra presencia es el mejor regalo, pero pronto compartiremos más información.</p>
-        </div>
-        <div>
+          <p>[Texto sobre regalos, cuenta bancaria o lista de bodas.]</p>
+        </article>
+
+        <article>
           <h3>Música</h3>
-          <p>Déjanos una canción que no pueda faltar en la fiesta.</p>
-        </div>
+          <p>[Texto para pedir canciones a los invitados.]</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery-section">
+    <div class="wrap reveal">
+      <p class="eyebrow">Galería</p>
+      <h2>Nuestros momentos</h2>
+      <p class="lead">Aquí irán algunas de vuestras fotos favoritas.</p>
+
+      <div class="gallery">
+        <div class="placeholder">Foto</div>
+        <div class="placeholder">Foto</div>
+        <div class="placeholder">Foto</div>
+        <div class="placeholder">Foto</div>
+        <div class="placeholder">Foto</div>
+        <div class="placeholder">Foto</div>
       </div>
     </div>
   </section>
 
   <section id="rsvp" class="section">
     <div class="wrap reveal">
-      <p class="mini">RSVP</p>
+      <p class="eyebrow">RSVP</p>
       <h2>Confirma tu asistencia</h2>
       <p class="lead">Ayúdanos con la organización indicando asistencia, acompañante, alergias, menú y canción favorita.</p>
 
@@ -176,10 +225,12 @@
           <label>Nombre y apellidos</label>
           <input name="nombre" required placeholder="Tu nombre">
         </div>
+
         <div>
           <label>Código de invitación</label>
           <input name="codigo" placeholder="Opcional">
         </div>
+
         <div>
           <label>¿Vienes con acompañante?</label>
           <select name="acompanante">
@@ -188,10 +239,22 @@
             <option>No lo sé todavía</option>
           </select>
         </div>
+
         <div>
           <label>Nombre del acompañante</label>
           <input name="nombreAcompanante" placeholder="Si aplica">
         </div>
+
+        <div>
+          <label>Niños</label>
+          <select name="ninos">
+            <option>No</option>
+            <option>Sí, 1</option>
+            <option>Sí, 2</option>
+            <option>Sí, 3 o más</option>
+          </select>
+        </div>
+
         <div>
           <label>Menú</label>
           <select name="menu">
@@ -203,6 +266,7 @@
             <option>Otro</option>
           </select>
         </div>
+
         <div>
           <label>Transporte</label>
           <select name="transporte">
@@ -212,31 +276,45 @@
             <option>Ida y vuelta</option>
           </select>
         </div>
+
+        <div>
+          <label>¿Necesitas hotel?</label>
+          <select name="hotel">
+            <option>No</option>
+            <option>Sí</option>
+            <option>Quizá</option>
+          </select>
+        </div>
+
         <div class="full">
           <label>Alergias o intolerancias</label>
           <textarea name="alergias" placeholder="Cuéntanos cualquier alergia, intolerancia o necesidad especial"></textarea>
         </div>
+
         <div>
           <label>Canción que quieres escuchar</label>
           <input name="cancion" placeholder="Canción - artista">
         </div>
+
         <div>
           <label>Teléfono / WhatsApp</label>
           <input name="telefono" placeholder="+34 ...">
         </div>
+
         <div class="full">
           <label>Mensaje para los novios</label>
           <textarea name="mensaje" placeholder="Déjanos un mensaje bonito"></textarea>
         </div>
-        <button class="btn primary full" type="submit">Enviar confirmación</button>
-        <p class="note full">De momento las respuestas se envían por email. Después podemos conectarlo a Google Sheets.</p>
+
+        <button class="btn btn--primary full" type="submit">Enviar confirmación</button>
+        <p class="note full">Ahora mismo se prepara un email. Más adelante podemos conectarlo a Google Sheets o a un panel privado.</p>
       </form>
     </div>
   </section>
 
-  <footer>
-    <p class="script">Estrella & David</p>
-    <p>Gracias por acompañarnos en nuestra historia.</p>
+  <footer class="footer">
+    <p class="script">[Nombre 1] & [Nombre 2]</p>
+    <p>Gracias por formar parte de nuestra historia.</p>
   </footer>
 
   <div id="toast" class="toast">Preparando confirmación...</div>

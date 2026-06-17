@@ -1,4 +1,10 @@
-const weddingDate = new Date("2026-06-15T17:30:00");
+// CAMBIA AQUÍ LA FECHA CUANDO LA TENGÁIS
+// Formato: AÑO-MES-DÍA T HORA:MINUTOS:SEGUNDOS
+const weddingDate = new Date("2027-06-15T17:30:00");
+
+// CAMBIA AQUÍ EL EMAIL DONDE QUERÉIS RECIBIR CONFIRMACIONES
+const confirmationEmail = "TU_EMAIL_AQUI@ejemplo.com";
+
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
@@ -8,6 +14,7 @@ const toast = $("#toast");
 
 function updateCountdown() {
   const diff = Math.max(weddingDate - new Date(), 0);
+
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
@@ -28,8 +35,11 @@ async function playMusic() {
 }
 
 function toggleMusic() {
-  if (audio.paused) playMusic();
-  else audio.pause();
+  if (audio.paused) {
+    playMusic();
+  } else {
+    audio.pause();
+  }
 }
 
 $("#enterWithMusic").addEventListener("click", () => {
@@ -48,15 +58,17 @@ $("#rsvpForm").addEventListener("submit", (event) => {
 
   const data = Object.fromEntries(new FormData(event.target).entries());
 
-  const body = encodeURIComponent(`Confirmación boda Estrella & David
+  const body = encodeURIComponent(`Confirmación boda
 
 Asistencia: ${data.asistencia || ""}
 Nombre: ${data.nombre || ""}
 Código invitación: ${data.codigo || ""}
 Acompañante: ${data.acompanante || ""}
 Nombre acompañante: ${data.nombreAcompanante || ""}
+Niños: ${data.ninos || ""}
 Menú: ${data.menu || ""}
 Transporte: ${data.transporte || ""}
+Hotel: ${data.hotel || ""}
 Alergias/intolerancias: ${data.alergias || ""}
 Canción sugerida: ${data.cancion || ""}
 Teléfono: ${data.telefono || ""}
@@ -65,12 +77,14 @@ Mensaje: ${data.mensaje || ""}`);
   toast.classList.add("show");
   setTimeout(() => toast.classList.remove("show"), 2500);
 
-  window.location.href = `mailto:david.martinez.dmg@gmail.com?subject=RSVP boda Estrella y David&body=${body}`;
+  window.location.href = `mailto:${confirmationEmail}?subject=RSVP boda&body=${body}`;
 });
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("visible");
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
   });
 }, { threshold: 0.15 });
 
