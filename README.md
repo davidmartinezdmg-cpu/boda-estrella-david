@@ -1,43 +1,11 @@
-# Boda David & Estrella — Premium Mobile
+# Boda David & Estrella — v4
 
-Versión optimizada para móvil.
-
-## Incluye
-
-- Diseño mobile-first.
-- Entrada tipo invitación/sobre.
-- Flores animadas.
-- Pétalos cayendo.
-- Efectos al hacer scroll.
-- Cuenta atrás elegante.
-- Música al entrar.
-- Información de boda.
-- Finca La Torreta.
-- Regalos con número de cuenta y botón copiar.
-- RSVP completo.
-
-## Cambiar datos
-
-En `index.html`, cambiar textos entre corchetes:
-
-- [AÑO]
-- [HORA]
-- [Lugar de la ceremonia]
-- [Dirección de la ceremonia]
-- [Ciudad]
-- [Dirección de Finca La Torreta]
-- [ENLACE GOOGLE MAPS...]
-
-En `js/app.js`, cambiar:
-
-```js
-const weddingDate = new Date("2026-10-03T17:30:00");
-const confirmationEmail = "TU_EMAIL_AQUI@ejemplo.com";
-const ibanText = "ES00 0000 0000 0000 0000 0000";
-```
-
-## Música
-
-Subir canción como:
-
-`assets/audio/entrada.mp3`
+Cambios:
+- Año 2026.
+- Agenda: ceremonia 13:00, cóctel 14:00, comida 15:30, fiesta 17:00.
+- Número de cuenta añadido.
+- Flores laterales animadas.
+- Nombre de portada más pequeño.
+- Dress code formal con traje y vestido.
+- Eliminados campos de música y menú infantil.
+- Confirmación sin canción.

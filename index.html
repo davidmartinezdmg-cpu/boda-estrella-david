@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>David & Estrella | Nuestra boda</title>
   <meta name="description" content="Invitación online de boda de David y Estrella" />
   <meta name="theme-color" content="#fff7ef" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -20,17 +17,18 @@
     <source src="assets/audio/entrada.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="loader" id="intro">
-    <div class="loader-flower loader-flower-left"></div>
-    <div class="loader-flower loader-flower-right"></div>
+  <div class="side-flower side-flower-left" aria-hidden="true"></div>
+  <div class="side-flower side-flower-right" aria-hidden="true"></div>
 
+  <div class="loader" id="intro">
+    <div class="watercolor-flower intro-flower-left"></div>
+    <div class="watercolor-flower intro-flower-right"></div>
     <div class="envelope">
       <div class="seal">D&E</div>
       <p class="overline">Invitación de boda</p>
       <h1>David <span>&</span> Estrella</h1>
-      <p class="date">3 de octubre de [AÑO]</p>
+      <p class="date">3 de octubre de 2026</p>
       <p class="intro-text">Abre nuestra invitación y acompáñanos en este día tan especial.</p>
-
       <div class="actions">
         <button id="enterWithMusic" class="btn primary">Entrar con música</button>
         <button id="enterWithoutMusic" class="btn ghost">Entrar sin música</button>
@@ -43,6 +41,7 @@
     <nav>
       <a href="#boda">Boda</a>
       <a href="#agenda">Agenda</a>
+      <a href="#dresscode">Dress code</a>
       <a href="#regalos">Regalos</a>
       <a href="#rsvp">Confirmar</a>
     </nav>
@@ -50,8 +49,8 @@
   </header>
 
   <main id="inicio" class="hero">
-    <div class="floating-florals floral-a"></div>
-    <div class="floating-florals floral-b"></div>
+    <div class="floral-corner floral-top-left"></div>
+    <div class="floral-corner floral-bottom-right"></div>
     <div class="petals" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
     </div>
@@ -59,9 +58,8 @@
     <section class="hero-card reveal">
       <p class="overline">¡Nos casamos!</p>
       <h2>David <span>y</span> Estrella</h2>
-      <p class="date hero-date">3 de octubre de [AÑO] · [HORA] h</p>
+      <p class="date hero-date">3 de octubre de 2026 · [HORA] h</p>
       <p class="script">Queremos compartir este día contigo</p>
-
       <div class="hero-buttons">
         <a class="btn primary" href="#rsvp">Confirmar asistencia</a>
         <a class="btn ghost" href="#boda">Ver detalles</a>
@@ -74,7 +72,6 @@
       <p class="overline">Cuenta atrás</p>
       <h2>Falta muy poco</h2>
       <p class="lead">Cada segundo nos acerca a un día que queremos vivir rodeados de las personas que más queremos.</p>
-
       <div class="countdown">
         <div><strong data-days>00</strong><span>Días</span></div>
         <div><strong data-hours>00</strong><span>Horas</span></div>
@@ -115,16 +112,32 @@
       <p class="lead">Un resumen de los momentos principales de la celebración.</p>
 
       <div class="mobile-timeline">
-        <article><span>[Hora]</span><strong>Ceremonia</strong></article>
-        <article><span>[Hora]</span><strong>Cóctel</strong></article>
-        <article><span>[Hora]</span><strong>Cena</strong></article>
-        <article><span>[Hora]</span><strong>Baile</strong></article>
-        <article><span>[Hora]</span><strong>Fiesta</strong></article>
+        <article><span>13:00</span><strong>Ceremonia</strong></article>
+        <article><span>14:00</span><strong>Cóctel</strong></article>
+        <article><span>15:30</span><strong>Comida</strong></article>
+        <article><span>17:00</span><strong>Fiesta</strong></article>
       </div>
     </div>
   </section>
 
-  <section id="info" class="section soft">
+  <section id="dresscode" class="section soft">
+    <div class="wrap reveal">
+      <p class="overline">Dress code</p>
+      <h2>Etiqueta</h2>
+      <p class="lead">Nos encantará veros guapísimos y cómodos para disfrutar de todo el día.</p>
+
+      <div class="dress-card">
+        <div class="dress-icon">
+          <span>🤵</span>
+          <span>👗</span>
+        </div>
+        <h3>Formal</h3>
+        <p>Elegante y cuidado, pero sin perder vuestra esencia. Queremos que os sintáis vosotros mismos mientras celebramos juntos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="info" class="section">
     <div class="wrap reveal">
       <p class="overline">Información útil</p>
       <h2>Para los invitados</h2>
@@ -132,8 +145,7 @@
       <div class="info-grid">
         <article><span>🚌</span><h3>Transporte</h3><p>[Información sobre autobuses, horarios o puntos de recogida.]</p></article>
         <article><span>🏨</span><h3>Alojamiento</h3><p>[Hoteles recomendados o zonas cercanas para quienes vengan de fuera.]</p></article>
-        <article><span>🍽️</span><h3>Menú</h3><p>Indícanos en la confirmación si tienes alergias, intolerancias o alguna necesidad especial.</p></article>
-        <article><span>🎵</span><h3>Música</h3><p>Déjanos una canción que no pueda faltar en la fiesta.</p></article>
+        <article><span>🍽️</span><h3>Alergias</h3><p>Indícanos en la confirmación si tienes alergias, intolerancias o alguna necesidad especial.</p></article>
       </div>
     </div>
   </section>
@@ -148,7 +160,7 @@
         <div class="gift-glow"></div>
         <span class="gift-icon">🎁</span>
         <p class="account-label">Número de cuenta</p>
-        <p class="iban" id="iban">ES00 0000 0000 0000 0000 0000</p>
+        <p class="iban" id="iban">ES56 1465 0100 9820 5050 2922</p>
         <p class="account-note">Titulares: David y Estrella</p>
         <button class="btn ghost" id="copyIban">Copiar número de cuenta</button>
       </div>
@@ -159,7 +171,7 @@
     <div class="wrap reveal">
       <p class="overline">Confirmación</p>
       <h2>Confirma tu asistencia</h2>
-      <p class="lead">Ayúdanos con la organización indicando asistencia, acompañante, alergias, transporte y canción favorita.</p>
+      <p class="lead">Ayúdanos con la organización indicando asistencia, acompañante, alergias y transporte.</p>
 
       <form id="rsvpForm" class="form">
         <div class="full">
@@ -177,14 +189,13 @@
         <div><label>Nombre del acompañante</label><input name="nombreAcompanante" placeholder="Si aplica"></div>
 
         <div><label>Niños</label><select name="ninos"><option>No</option><option>Sí, 1</option><option>Sí, 2</option><option>Sí, 3 o más</option></select></div>
-        <div><label>Menú</label><select name="menu"><option>Estándar</option><option>Vegetariano</option><option>Vegano</option><option>Sin gluten</option><option>Infantil</option><option>Otro</option></select></div>
+        <div><label>Tipo de menú</label><select name="menu"><option>Estándar</option><option>Vegetariano</option><option>Vegano</option><option>Sin gluten</option><option>Otro</option></select></div>
 
         <div><label>Transporte</label><select name="transporte"><option>No necesito</option><option>Ida</option><option>Vuelta</option><option>Ida y vuelta</option></select></div>
         <div><label>Teléfono / WhatsApp</label><input name="telefono" placeholder="+34 ..."></div>
 
         <div class="full"><label>Alergias o intolerancias</label><textarea name="alergias" placeholder="Cuéntanos cualquier alergia, intolerancia o necesidad especial"></textarea></div>
 
-        <div><label>Canción que quieres escuchar</label><input name="cancion" placeholder="Canción - artista"></div>
         <div><label>Email</label><input name="email" type="email" placeholder="Opcional"></div>
 
         <div class="full"><label>Mensaje para los novios</label><textarea name="mensaje" placeholder="Déjanos un mensaje bonito"></textarea></div>

@@ -1,6 +1,6 @@
-const weddingDate = new Date("2026-10-03T17:30:00");
+const weddingDate = new Date("2026-10-03T13:00:00");
 const confirmationEmail = "TU_EMAIL_AQUI@ejemplo.com";
-const ibanText = "ES00 0000 0000 0000 0000 0000";
+const ibanText = "ES56 1465 0100 9820 5050 2922";
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
@@ -55,7 +55,7 @@ $("#iban").textContent = ibanText;
 
 $("#copyIban").addEventListener("click", async () => {
   try {
-    await navigator.clipboard.writeText(ibanText);
+    await navigator.clipboard.writeText(ibanText.replaceAll(" ", ""));
     showToast("Número de cuenta copiado");
   } catch (error) {
     showToast("No se pudo copiar");
@@ -74,10 +74,9 @@ Código invitación: ${data.codigo || ""}
 Acompañante: ${data.acompanante || ""}
 Nombre acompañante: ${data.nombreAcompanante || ""}
 Niños: ${data.ninos || ""}
-Menú: ${data.menu || ""}
+Tipo de menú: ${data.menu || ""}
 Transporte: ${data.transporte || ""}
 Alergias/intolerancias: ${data.alergias || ""}
-Canción sugerida: ${data.cancion || ""}
 Teléfono: ${data.telefono || ""}
 Email: ${data.email || ""}
 Mensaje: ${data.mensaje || ""}`);
