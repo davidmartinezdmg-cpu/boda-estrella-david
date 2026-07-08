@@ -1,51 +1,27 @@
-# Invitación online de boda — plantilla
+# Boda David & Estrella — v3
 
-Esta versión está hecha SIN DATOS DEFINITIVOS, con huecos para rellenar.
+Versión sin fotos, sin historia y sin dress code.
 
-## Qué subir a GitHub
+## Incluye
+- Música al entrar.
+- Cuenta atrás.
+- Ceremonia.
+- Celebración en Finca La Torreta.
+- Agenda.
+- Información útil.
+- Regalos con número de cuenta.
+- Formulario RSVP con acompañante, niños, menú, alergias, transporte y canción.
 
-Sube estos elementos a la raíz del repositorio:
+## Cambiar datos
+En `index.html`: busca los textos entre corchetes `[AÑO]`, `[HORA]`, `[Dirección...]`.
 
-- index.html
-- css/styles.css
-- js/app.js
-- assets/
-
-## Dónde cambiar los datos
-
-### En index.html
-
-Busca textos entre corchetes, por ejemplo:
-
-- [Nombre 1]
-- [Nombre 2]
-- [DÍA]
-- [MES]
-- [AÑO]
-- [HORA]
-- [Nombre del lugar de la ceremonia]
-- [Dirección]
-- [ENLACE GOOGLE MAPS CEREMONIA]
-
-### En js/app.js
-
-Cambia:
-
+En `js/app.js` cambia:
 ```js
-const weddingDate = new Date("2027-06-15T17:30:00");
+const weddingDate = new Date("2026-10-03T17:30:00");
 const confirmationEmail = "TU_EMAIL_AQUI@ejemplo.com";
+const ibanText = "ES00 0000 0000 0000 0000 0000";
 ```
 
-### Música
-
-Sube una canción llamada:
-
-assets/audio/entrada.mp3
-
-Si no subes música, la web funciona igual, solo que no sonará.
-
-### Fotos
-
-Más adelante se pueden añadir fotos en:
-
-assets/images/
+## Música
+Subir canción como:
+`assets/audio/entrada.mp3`
