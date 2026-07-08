@@ -1,9 +1,8 @@
-# Boda David & Estrella — v5 web
+# Boda David & Estrella — v6 floral caballos
 
-Cambios:
-- Portada mucho más decorada con flores laterales.
-- Flores animadas dentro de secciones.
-- Corazones decorativos.
-- Mando de Play animado.
-- Eliminado código de invitación del formulario.
-- RSVP sin campo música.
+Versión inspirada en el diseño floral crema:
+- Más flores decorativas.
+- Caballos animados.
+- Más mandos en movimiento.
+- Título David & Estrella más pequeño.
+- Todo el nombre en verde oscuro.
