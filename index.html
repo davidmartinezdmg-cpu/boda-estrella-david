@@ -3,77 +3,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>David & Estrella | Nuestra boda</title>
   <meta name="description" content="Invitación online de boda de David y Estrella" />
+  <meta name="theme-color" content="#fff7ef" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
-  <audio id="music" loop preload="auto"><source src="assets/audio/entrada.mp3" type="audio/mpeg"></audio>
-  <div class="intro" id="intro">
-    <div class="botanical left"></div><div class="botanical right"></div>
-    <div class="intro-card">
-      <p class="eyebrow">Estás invitado/a a nuestra boda</p>
+  <audio id="music" loop preload="auto">
+    <source src="assets/audio/entrada.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="loader" id="intro">
+    <div class="loader-flower loader-flower-left"></div>
+    <div class="loader-flower loader-flower-right"></div>
+
+    <div class="envelope">
+      <div class="seal">D&E</div>
+      <p class="overline">Invitación de boda</p>
       <h1>David <span>&</span> Estrella</h1>
-      <p class="date-line">3 de octubre de [AÑO]</p>
-      <p class="intro-text">Hemos preparado esta invitación para que tengas toda la información del gran día.</p>
-      <div class="button-row"><button id="enterWithMusic" class="btn primary">Entrar con música</button><button id="enterWithoutMusic" class="btn secondary">Entrar sin música</button></div>
+      <p class="date">3 de octubre de [AÑO]</p>
+      <p class="intro-text">Abre nuestra invitación y acompáñanos en este día tan especial.</p>
+
+      <div class="actions">
+        <button id="enterWithMusic" class="btn primary">Entrar con música</button>
+        <button id="enterWithoutMusic" class="btn ghost">Entrar sin música</button>
+      </div>
     </div>
   </div>
 
-  <header class="site-header">
-    <a href="#inicio" class="logo">D & E</a>
-    <nav><a href="#boda">La boda</a><a href="#agenda">Agenda</a><a href="#info">Información</a><a href="#regalos">Regalos</a><a href="#rsvp">Confirmar</a></nav>
-    <button id="musicBtn" class="music-btn">♪</button>
+  <header class="topbar">
+    <a class="brand" href="#inicio">D&E</a>
+    <nav>
+      <a href="#boda">Boda</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#regalos">Regalos</a>
+      <a href="#rsvp">Confirmar</a>
+    </nav>
+    <button class="music" id="musicBtn" aria-label="Música">♪</button>
   </header>
 
   <main id="inicio" class="hero">
-    <div class="petals"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="floating-florals floral-a"></div>
+    <div class="floating-florals floral-b"></div>
+    <div class="petals" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
     <section class="hero-card reveal">
-      <p class="eyebrow">¡Nos casamos!</p>
+      <p class="overline">¡Nos casamos!</p>
       <h2>David <span>y</span> Estrella</h2>
-      <p class="hero-date">3 de octubre de [AÑO] · [HORA] h</p>
-      <p class="script">Nos hará muchísima ilusión compartir este día contigo</p>
-      <div class="button-row"><a href="#rsvp" class="btn primary">Confirmar asistencia</a><a href="#boda" class="btn secondary">Ver información</a></div>
+      <p class="date hero-date">3 de octubre de [AÑO] · [HORA] h</p>
+      <p class="script">Queremos compartir este día contigo</p>
+
+      <div class="hero-buttons">
+        <a class="btn primary" href="#rsvp">Confirmar asistencia</a>
+        <a class="btn ghost" href="#boda">Ver detalles</a>
+      </div>
     </section>
   </main>
 
-  <section class="section"><div class="wrap reveal"><p class="eyebrow">Cuenta atrás</p><h2>Falta muy poco</h2><p class="lead">Cada día queda menos para celebrar juntos nuestra boda.</p><div class="countdown"><div><strong data-days>00</strong><span>Días</span></div><div><strong data-hours>00</strong><span>Horas</span></div><div><strong data-minutes>00</strong><span>Minutos</span></div><div><strong data-seconds>00</strong><span>Segundos</span></div></div></div></section>
+  <section class="section countdown-zone">
+    <div class="wrap reveal">
+      <p class="overline">Cuenta atrás</p>
+      <h2>Falta muy poco</h2>
+      <p class="lead">Cada segundo nos acerca a un día que queremos vivir rodeados de las personas que más queremos.</p>
 
-  <section id="boda" class="section soft"><div class="wrap reveal"><p class="eyebrow">El gran día</p><h2>La boda</h2><p class="lead">Toda la información importante en un solo lugar.</p><div class="cards two">
-    <article class="card"><div class="icon">💍</div><h3>Ceremonia</h3><p><strong>[Lugar de la ceremonia]</strong><br>[Dirección de la ceremonia]<br>[Ciudad]</p><a href="[ENLACE GOOGLE MAPS CEREMONIA]" target="_blank">Ver mapa</a></article>
-    <article class="card"><div class="icon">🥂</div><h3>Celebración</h3><p><strong>Finca La Torreta</strong><br>[Dirección de Finca La Torreta]<br>[Ciudad]</p><a href="[ENLACE GOOGLE MAPS FINCA LA TORRETA]" target="_blank">Cómo llegar</a></article>
-  </div></div></section>
+      <div class="countdown">
+        <div><strong data-days>00</strong><span>Días</span></div>
+        <div><strong data-hours>00</strong><span>Horas</span></div>
+        <div><strong data-minutes>00</strong><span>Minutos</span></div>
+        <div><strong data-seconds>00</strong><span>Segundos</span></div>
+      </div>
+    </div>
+  </section>
 
-  <section id="agenda" class="section"><div class="wrap reveal"><p class="eyebrow">Planning</p><h2>Agenda del día</h2><p class="lead">Estos serán algunos de los momentos que viviremos juntos.</p><div class="timeline"><div><strong>[Hora]</strong><span>Ceremonia</span></div><div><strong>[Hora]</strong><span>Cóctel</span></div><div><strong>[Hora]</strong><span>Cena</span></div><div><strong>[Hora]</strong><span>Baile</span></div><div><strong>[Hora]</strong><span>Fiesta</span></div></div></div></section>
+  <section id="boda" class="section soft">
+    <div class="wrap reveal">
+      <p class="overline">El gran día</p>
+      <h2>La boda</h2>
+      <p class="lead">Toda la información importante para que puedas disfrutar del día sin preocuparte por nada.</p>
 
-  <section id="info" class="section soft"><div class="wrap reveal"><p class="eyebrow">Información útil</p><h2>Para los invitados</h2><div class="info-grid">
-    <article><h3>Transporte</h3><p>[Información sobre autobuses, horarios o puntos de recogida.]</p></article>
-    <article><h3>Alojamiento</h3><p>[Información de hoteles recomendados o zonas cercanas.]</p></article>
-    <article><h3>Menú</h3><p>Indícanos en la confirmación si tienes alergias, intolerancias o alguna necesidad especial.</p></article>
-    <article><h3>Música</h3><p>Déjanos una canción que no pueda faltar en la fiesta.</p></article>
-  </div></div></section>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">💍</div>
+          <h3>Ceremonia</h3>
+          <p><strong>[Lugar de la ceremonia]</strong><br>[Dirección de la ceremonia]<br>[Ciudad]</p>
+          <a href="[ENLACE GOOGLE MAPS CEREMONIA]" target="_blank">Ver mapa</a>
+        </article>
 
-  <section id="regalos" class="section gifts"><div class="wrap reveal"><p class="eyebrow">Regalos</p><h2>Vuestra presencia es nuestro mejor regalo</h2><p class="lead">Lo más importante para nosotros es celebrar este día con vosotros. Si además queréis tener un detalle, podéis hacerlo en el siguiente número de cuenta.</p><div class="gift-card"><span class="gift-icon">🎁</span><p class="account-label">Número de cuenta</p><p class="iban" id="iban">ES00 0000 0000 0000 0000 0000</p><p class="account-note">Titulares: David y Estrella</p><button class="btn secondary" id="copyIban">Copiar número de cuenta</button></div></div></section>
+        <article class="card featured">
+          <div class="icon">🥂</div>
+          <h3>Celebración</h3>
+          <p><strong>Finca La Torreta</strong><br>[Dirección de Finca La Torreta]<br>[Ciudad]</p>
+          <a href="[ENLACE GOOGLE MAPS FINCA LA TORRETA]" target="_blank">Cómo llegar</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <section id="rsvp" class="section"><div class="wrap reveal"><p class="eyebrow">Confirmación</p><h2>Confirma tu asistencia</h2><p class="lead">Ayúdanos con la organización indicando asistencia, acompañante, alergias, transporte y canción favorita.</p>
-    <form id="rsvpForm" class="form">
-      <div class="full"><label>¿Vienes a la boda?</label><div class="pills"><label><input type="radio" name="asistencia" value="Sí" required><span>Sí, allí estaré</span></label><label><input type="radio" name="asistencia" value="No"><span>No podré asistir</span></label></div></div>
-      <div><label>Nombre y apellidos</label><input name="nombre" required placeholder="Tu nombre"></div><div><label>Código de invitación</label><input name="codigo" placeholder="Opcional"></div>
-      <div><label>¿Vienes con acompañante?</label><select name="acompanante"><option>No</option><option>Sí</option><option>No lo sé todavía</option></select></div><div><label>Nombre del acompañante</label><input name="nombreAcompanante" placeholder="Si aplica"></div>
-      <div><label>Niños</label><select name="ninos"><option>No</option><option>Sí, 1</option><option>Sí, 2</option><option>Sí, 3 o más</option></select></div><div><label>Menú</label><select name="menu"><option>Estándar</option><option>Vegetariano</option><option>Vegano</option><option>Sin gluten</option><option>Infantil</option><option>Otro</option></select></div>
-      <div><label>Transporte</label><select name="transporte"><option>No necesito</option><option>Ida</option><option>Vuelta</option><option>Ida y vuelta</option></select></div><div><label>Teléfono / WhatsApp</label><input name="telefono" placeholder="+34 ..."></div>
-      <div class="full"><label>Alergias o intolerancias</label><textarea name="alergias" placeholder="Cuéntanos cualquier alergia, intolerancia o necesidad especial"></textarea></div>
-      <div><label>Canción que quieres escuchar</label><input name="cancion" placeholder="Canción - artista"></div><div><label>Email</label><input name="email" type="email" placeholder="Opcional"></div>
-      <div class="full"><label>Mensaje para los novios</label><textarea name="mensaje" placeholder="Déjanos un mensaje bonito"></textarea></div>
-      <button class="btn primary full" type="submit">Enviar confirmación</button><p class="note full">Ahora mismo se prepara un email. Después podemos conectarlo a Google Sheets para guardar respuestas automáticamente.</p>
-    </form>
-  </div></section>
+  <section id="agenda" class="section">
+    <div class="wrap reveal">
+      <p class="overline">Planning</p>
+      <h2>Agenda del día</h2>
+      <p class="lead">Un resumen de los momentos principales de la celebración.</p>
 
-  <footer class="footer"><p class="script">David & Estrella</p><p>Gracias por formar parte de nuestro día.</p></footer>
-  <div id="toast" class="toast">Listo</div>
+      <div class="mobile-timeline">
+        <article><span>[Hora]</span><strong>Ceremonia</strong></article>
+        <article><span>[Hora]</span><strong>Cóctel</strong></article>
+        <article><span>[Hora]</span><strong>Cena</strong></article>
+        <article><span>[Hora]</span><strong>Baile</strong></article>
+        <article><span>[Hora]</span><strong>Fiesta</strong></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="info" class="section soft">
+    <div class="wrap reveal">
+      <p class="overline">Información útil</p>
+      <h2>Para los invitados</h2>
+
+      <div class="info-grid">
+        <article><span>🚌</span><h3>Transporte</h3><p>[Información sobre autobuses, horarios o puntos de recogida.]</p></article>
+        <article><span>🏨</span><h3>Alojamiento</h3><p>[Hoteles recomendados o zonas cercanas para quienes vengan de fuera.]</p></article>
+        <article><span>🍽️</span><h3>Menú</h3><p>Indícanos en la confirmación si tienes alergias, intolerancias o alguna necesidad especial.</p></article>
+        <article><span>🎵</span><h3>Música</h3><p>Déjanos una canción que no pueda faltar en la fiesta.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="regalos" class="section gifts">
+    <div class="wrap reveal">
+      <p class="overline">Regalos</p>
+      <h2>Vuestra presencia es nuestro mejor regalo</h2>
+      <p class="lead">Lo más importante para nosotros es celebrar este día con vosotros. Si además queréis tener un detalle, podéis hacerlo en el siguiente número de cuenta.</p>
+
+      <div class="gift-card">
+        <div class="gift-glow"></div>
+        <span class="gift-icon">🎁</span>
+        <p class="account-label">Número de cuenta</p>
+        <p class="iban" id="iban">ES00 0000 0000 0000 0000 0000</p>
+        <p class="account-note">Titulares: David y Estrella</p>
+        <button class="btn ghost" id="copyIban">Copiar número de cuenta</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section rsvp-section">
+    <div class="wrap reveal">
+      <p class="overline">Confirmación</p>
+      <h2>Confirma tu asistencia</h2>
+      <p class="lead">Ayúdanos con la organización indicando asistencia, acompañante, alergias, transporte y canción favorita.</p>
+
+      <form id="rsvpForm" class="form">
+        <div class="full">
+          <label>¿Vienes a la boda?</label>
+          <div class="pills">
+            <label><input type="radio" name="asistencia" value="Sí" required><span>Sí, allí estaré</span></label>
+            <label><input type="radio" name="asistencia" value="No"><span>No podré asistir</span></label>
+          </div>
+        </div>
+
+        <div><label>Nombre y apellidos</label><input name="nombre" required placeholder="Tu nombre"></div>
+        <div><label>Código de invitación</label><input name="codigo" placeholder="Opcional"></div>
+
+        <div><label>¿Vienes con acompañante?</label><select name="acompanante"><option>No</option><option>Sí</option><option>No lo sé todavía</option></select></div>
+        <div><label>Nombre del acompañante</label><input name="nombreAcompanante" placeholder="Si aplica"></div>
+
+        <div><label>Niños</label><select name="ninos"><option>No</option><option>Sí, 1</option><option>Sí, 2</option><option>Sí, 3 o más</option></select></div>
+        <div><label>Menú</label><select name="menu"><option>Estándar</option><option>Vegetariano</option><option>Vegano</option><option>Sin gluten</option><option>Infantil</option><option>Otro</option></select></div>
+
+        <div><label>Transporte</label><select name="transporte"><option>No necesito</option><option>Ida</option><option>Vuelta</option><option>Ida y vuelta</option></select></div>
+        <div><label>Teléfono / WhatsApp</label><input name="telefono" placeholder="+34 ..."></div>
+
+        <div class="full"><label>Alergias o intolerancias</label><textarea name="alergias" placeholder="Cuéntanos cualquier alergia, intolerancia o necesidad especial"></textarea></div>
+
+        <div><label>Canción que quieres escuchar</label><input name="cancion" placeholder="Canción - artista"></div>
+        <div><label>Email</label><input name="email" type="email" placeholder="Opcional"></div>
+
+        <div class="full"><label>Mensaje para los novios</label><textarea name="mensaje" placeholder="Déjanos un mensaje bonito"></textarea></div>
+
+        <button class="btn primary full" type="submit">Enviar confirmación</button>
+        <p class="note full">Ahora mismo se prepara un email. Después lo podemos conectar a Google Sheets para guardar respuestas automáticamente.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="script">David & Estrella</p>
+    <p>Gracias por formar parte de nuestro día.</p>
+  </footer>
+
+  <div class="toast" id="toast">Listo</div>
   <script src="js/app.js"></script>
 </body>
 </html>
