@@ -1,11 +1,9 @@
-# Boda David & Estrella — v4
+# Boda David & Estrella — v5 web
 
 Cambios:
-- Año 2026.
-- Agenda: ceremonia 13:00, cóctel 14:00, comida 15:30, fiesta 17:00.
-- Número de cuenta añadido.
-- Flores laterales animadas.
-- Nombre de portada más pequeño.
-- Dress code formal con traje y vestido.
-- Eliminados campos de música y menú infantil.
-- Confirmación sin canción.
+- Portada mucho más decorada con flores laterales.
+- Flores animadas dentro de secciones.
+- Corazones decorativos.
+- Mando de Play animado.
+- Eliminado código de invitación del formulario.
+- RSVP sin campo música.

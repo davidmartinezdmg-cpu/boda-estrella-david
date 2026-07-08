@@ -17,12 +17,16 @@
     <source src="assets/audio/entrada.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="side-flower side-flower-left" aria-hidden="true"></div>
-  <div class="side-flower side-flower-right" aria-hidden="true"></div>
+  <div class="decor decor-left" aria-hidden="true"></div>
+  <div class="decor decor-right" aria-hidden="true"></div>
 
   <div class="loader" id="intro">
-    <div class="watercolor-flower intro-flower-left"></div>
-    <div class="watercolor-flower intro-flower-right"></div>
+    <div class="corner-flower intro-left" aria-hidden="true"></div>
+    <div class="corner-flower intro-right" aria-hidden="true"></div>
+    <div class="floating-icons" aria-hidden="true">
+      <span>♡</span><span>🎮</span><span>♡</span>
+    </div>
+
     <div class="envelope">
       <div class="seal">D&E</div>
       <p class="overline">Invitación de boda</p>
@@ -49,17 +53,17 @@
   </header>
 
   <main id="inicio" class="hero">
-    <div class="floral-corner floral-top-left"></div>
-    <div class="floral-corner floral-bottom-right"></div>
-    <div class="petals" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <div class="corner-flower hero-flower-left" aria-hidden="true"></div>
+    <div class="corner-flower hero-flower-right" aria-hidden="true"></div>
+    <div class="falling" aria-hidden="true">
+      <span>♡</span><span></span><span>♡</span><span></span><span>🎮</span><span></span><span>♡</span>
     </div>
 
     <section class="hero-card reveal">
       <p class="overline">¡Nos casamos!</p>
       <h2>David <span>y</span> Estrella</h2>
-      <p class="date hero-date">3 de octubre de 2026 · [HORA] h</p>
-      <p class="script">Queremos compartir este día contigo</p>
+      <p class="date hero-date">3 de octubre de 2026</p>
+      <p class="script">Finca La Torreta</p>
       <div class="hero-buttons">
         <a class="btn primary" href="#rsvp">Confirmar asistencia</a>
         <a class="btn ghost" href="#boda">Ver detalles</a>
@@ -68,10 +72,10 @@
   </main>
 
   <section class="section countdown-zone">
+    <div class="section-flower flower-small-left" aria-hidden="true"></div>
     <div class="wrap reveal">
       <p class="overline">Cuenta atrás</p>
-      <h2>Falta muy poco</h2>
-      <p class="lead">Cada segundo nos acerca a un día que queremos vivir rodeados de las personas que más queremos.</p>
+      <h2>Faltan</h2>
       <div class="countdown">
         <div><strong data-days>00</strong><span>Días</span></div>
         <div><strong data-hours>00</strong><span>Horas</span></div>
@@ -82,6 +86,7 @@
   </section>
 
   <section id="boda" class="section soft">
+    <div class="section-flower flower-small-right" aria-hidden="true"></div>
     <div class="wrap reveal">
       <p class="overline">El gran día</p>
       <h2>La boda</h2>
@@ -107,15 +112,13 @@
 
   <section id="agenda" class="section">
     <div class="wrap reveal">
-      <p class="overline">Planning</p>
-      <h2>Agenda del día</h2>
-      <p class="lead">Un resumen de los momentos principales de la celebración.</p>
-
+      <p class="overline">Nuestro gran día</p>
+      <h2>Agenda</h2>
       <div class="mobile-timeline">
-        <article><span>13:00</span><strong>Ceremonia</strong></article>
-        <article><span>14:00</span><strong>Cóctel</strong></article>
-        <article><span>15:30</span><strong>Comida</strong></article>
-        <article><span>17:00</span><strong>Fiesta</strong></article>
+        <article><span>13:00</span><strong>Ceremonia</strong><p>El momento más especial.</p></article>
+        <article><span>14:00</span><strong>Cóctel</strong><p>Brindaremos juntos.</p></article>
+        <article><span>15:30</span><strong>Comida</strong><p>A disfrutar de una deliciosa comida.</p></article>
+        <article><span>17:00</span><strong>Fiesta</strong><p>Que empiece la celebración.</p></article>
       </div>
     </div>
   </section>
@@ -124,13 +127,8 @@
     <div class="wrap reveal">
       <p class="overline">Dress code</p>
       <h2>Etiqueta</h2>
-      <p class="lead">Nos encantará veros guapísimos y cómodos para disfrutar de todo el día.</p>
-
       <div class="dress-card">
-        <div class="dress-icon">
-          <span>🤵</span>
-          <span>👗</span>
-        </div>
+        <div class="dress-icon"><span>🤵</span><span>👗</span></div>
         <h3>Formal</h3>
         <p>Elegante y cuidado, pero sin perder vuestra esencia. Queremos que os sintáis vosotros mismos mientras celebramos juntos.</p>
       </div>
@@ -138,10 +136,10 @@
   </section>
 
   <section id="info" class="section">
+    <div class="section-flower flower-small-left lower" aria-hidden="true"></div>
     <div class="wrap reveal">
       <p class="overline">Información útil</p>
       <h2>Para los invitados</h2>
-
       <div class="info-grid">
         <article><span>🚌</span><h3>Transporte</h3><p>[Información sobre autobuses, horarios o puntos de recogida.]</p></article>
         <article><span>🏨</span><h3>Alojamiento</h3><p>[Hoteles recomendados o zonas cercanas para quienes vengan de fuera.]</p></article>
@@ -155,7 +153,6 @@
       <p class="overline">Regalos</p>
       <h2>Vuestra presencia es nuestro mejor regalo</h2>
       <p class="lead">Lo más importante para nosotros es celebrar este día con vosotros. Si además queréis tener un detalle, podéis hacerlo en el siguiente número de cuenta.</p>
-
       <div class="gift-card">
         <div class="gift-glow"></div>
         <span class="gift-icon">🎁</span>
@@ -168,6 +165,7 @@
   </section>
 
   <section id="rsvp" class="section rsvp-section">
+    <div class="section-flower flower-rsvp" aria-hidden="true"></div>
     <div class="wrap reveal">
       <p class="overline">Confirmación</p>
       <h2>Confirma tu asistencia</h2>
@@ -183,23 +181,15 @@
         </div>
 
         <div><label>Nombre y apellidos</label><input name="nombre" required placeholder="Tu nombre"></div>
-        <div><label>Código de invitación</label><input name="codigo" placeholder="Opcional"></div>
-
         <div><label>¿Vienes con acompañante?</label><select name="acompanante"><option>No</option><option>Sí</option><option>No lo sé todavía</option></select></div>
         <div><label>Nombre del acompañante</label><input name="nombreAcompanante" placeholder="Si aplica"></div>
-
         <div><label>Niños</label><select name="ninos"><option>No</option><option>Sí, 1</option><option>Sí, 2</option><option>Sí, 3 o más</option></select></div>
         <div><label>Tipo de menú</label><select name="menu"><option>Estándar</option><option>Vegetariano</option><option>Vegano</option><option>Sin gluten</option><option>Otro</option></select></div>
-
         <div><label>Transporte</label><select name="transporte"><option>No necesito</option><option>Ida</option><option>Vuelta</option><option>Ida y vuelta</option></select></div>
         <div><label>Teléfono / WhatsApp</label><input name="telefono" placeholder="+34 ..."></div>
-
-        <div class="full"><label>Alergias o intolerancias</label><textarea name="alergias" placeholder="Cuéntanos cualquier alergia, intolerancia o necesidad especial"></textarea></div>
-
         <div><label>Email</label><input name="email" type="email" placeholder="Opcional"></div>
-
+        <div class="full"><label>Alergias o intolerancias</label><textarea name="alergias" placeholder="Cuéntanos cualquier alergia, intolerancia o necesidad especial"></textarea></div>
         <div class="full"><label>Mensaje para los novios</label><textarea name="mensaje" placeholder="Déjanos un mensaje bonito"></textarea></div>
-
         <button class="btn primary full" type="submit">Enviar confirmación</button>
         <p class="note full">Ahora mismo se prepara un email. Después lo podemos conectar a Google Sheets para guardar respuestas automáticamente.</p>
       </form>

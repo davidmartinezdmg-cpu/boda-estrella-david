@@ -50,7 +50,6 @@ $("#enterWithoutMusic").addEventListener("click", () => {
 });
 
 $("#musicBtn").addEventListener("click", toggleMusic);
-
 $("#iban").textContent = ibanText;
 
 $("#copyIban").addEventListener("click", async () => {
@@ -70,7 +69,6 @@ $("#rsvpForm").addEventListener("submit", (event) => {
 
 Asistencia: ${data.asistencia || ""}
 Nombre: ${data.nombre || ""}
-Código invitación: ${data.codigo || ""}
 Acompañante: ${data.acompanante || ""}
 Nombre acompañante: ${data.nombreAcompanante || ""}
 Niños: ${data.ninos || ""}
