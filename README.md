@@ -1,4 +1,4 @@
-# Invitación de boda V1
+# Invitación de boda V2
 
 Web estática preparada para GitHub Pages.
 
