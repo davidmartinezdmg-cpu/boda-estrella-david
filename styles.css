@@ -1,12 +1,18 @@
+document.documentElement.classList.add("js");
 const menuBtn=document.querySelector('.menu-btn');
 const navLinks=document.querySelector('.nav-links');
 menuBtn?.addEventListener('click',()=>navLinks.classList.toggle('open'));
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
 
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+if ('IntersectionObserver' in window) {
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+}
 
-const target=new Date(document.querySelector('.countdown-grid').dataset.date).getTime();
+const countdownGrid=document.querySelector('.countdown-grid');
+const target=countdownGrid ? new Date(countdownGrid.dataset.date).getTime() : 0;
 function updateCountdown(){
   const distance=target-Date.now();
   if(distance<=0)return;
@@ -19,7 +25,7 @@ function updateCountdown(){
   document.getElementById('minutes').textContent=String(m).padStart(2,'0');
   document.getElementById('seconds').textContent=String(s).padStart(2,'0');
 }
-updateCountdown();setInterval(updateCountdown,1000);
+if(countdownGrid){updateCountdown();setInterval(updateCountdown,1000);}
 
 const RSVP_ENDPOINT='https://script.google.com/macros/s/AKfycbwsAvykXVlYEHh8Ym5lpokUaJA0kL4E53Xu5JFXNGP60aWqMSwBIPOA0jKNqOTf8M05/exec';
 const rsvpForm=document.getElementById('rsvp-form');

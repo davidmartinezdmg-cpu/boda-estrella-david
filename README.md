@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Invitación de boda" />
-  <title>Nuestra boda | Invitación</title>
+  <title>David & Estrella | Nuestra boda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -67,7 +67,7 @@
           <h3>Lugar</h3>
           <p>Finca La Torreta</p>
           <small>Av. de Elda, 5 · 03550 Sant Joan d’Alacant</small>
-          <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Finca+La+Torreta%2C+Av.+de+Elda%2C+5%2C+03550+Sant+Joan+d%27Alacant%2C+Alicante" target="_blank" rel="noopener">Abrir en Google Maps</a>
+          <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Finca+La+Torreta+Avenida+de+Elda+5+Sant+Joan+d%27Alacant" target="_blank" rel="noopener">Abrir en Google Maps</a>
         </article>
         <article class="detail-card reveal">
           <div class="card-icon">❦</div>
@@ -116,7 +116,7 @@
         <article class="info-box reveal"><h3>Autobús</h3><p>Habrá servicio de autobús desde Alicante y San Juan. Horarios por confirmar.</p></article>
         <article class="info-box reveal"><h3>Regalo</h3><p>Vuestra presencia es nuestro mejor regalo. Si además queréis ayudarnos con nuestra aventura, añadiremos aquí la información.</p></article>
         <article class="info-box reveal"><h3>Niños</h3><p>Indica en la confirmación si vienes con niños y sus edades para organizarlo todo.</p></article>
-        <article class="info-box reveal"><h3>Ubicación</h3><p>La celebración será en Finca La Torreta, en Sant Joan d’Alacant.</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Finca+La+Torreta%2C+Av.+de+Elda%2C+5%2C+03550+Sant+Joan+d%27Alacant%2C+Alicante" target="_blank" rel="noopener">Cómo llegar</a></article>
+        <article class="info-box reveal"><h3>Ubicación</h3><p>La celebración será en Finca La Torreta, en Sant Joan d’Alacant.</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Finca+La+Torreta+Avenida+de+Elda+5+Sant+Joan+d%27Alacant" target="_blank" rel="noopener">Cómo llegar</a></article>
       </div>
     </section>
 
@@ -169,7 +169,7 @@
         <div class="rsvp-copy">
           <p class="section-kicker">RSVP</p>
           <h2>¿Nos acompañas?</h2>
-          <p>Confirma tu asistencia antes del 3 de septiembre de 2027. La respuesta se guardará automáticamente en nuestra lista de invitados.</p>
+          <p>Confirma tu asistencia para acompañarnos en este día tan especial.</p>
         </div>
         <form id="rsvp-form">
           <div class="form-row">
