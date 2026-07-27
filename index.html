@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>David & Estrella | 3 de octubre de 2027</title>
+<title>David & Estrella | 3 de octubre de 2026</title>
 <meta name="description" content="Invitación de boda de David y Estrella" />
 <style>
 :root{--cream:#f7f1e7;--white:#fffdf8;--green:#526b57;--green2:#81927f;--gold:#b89461;--text:#2f342f;--muted:#6e756e;--line:#d9d1c2}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Montserrat,Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 10%,rgba(255,255,255,.9),transparent 28%),radial-gradient(circle at 85% 80%,rgba(129,146,127,.12),transparent 32%);z-index:-2}
 nav{position:sticky;top:0;z-index:30;background:rgba(247,241,231,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(82,107,87,.18)}
 nav .inner{max-width:1100px;margin:auto;display:flex;justify-content:center;gap:24px;padding:13px 16px;flex-wrap:wrap}
@@ -37,22 +37,76 @@ footer{text-align:center;padding:50px 20px 70px;color:var(--green);font-size:1.1
 .divider{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--green2);margin:5px 0 0}.divider:before,.divider:after{content:"";height:1px;width:90px;background:var(--line)}
 @media(max-width:720px){nav .inner{gap:12px}nav a{font-size:.7rem}.grid{grid-template-columns:1fr}.hero{min-height:88vh}.flower.left{width:58vw;left:-90px;top:35px}.flower.right{width:48vw;right:-95px;bottom:25px}.event{grid-template-columns:82px 1fr}.dress-icons{gap:35px}.dress-icons svg{width:95px;height:135px}section{padding:68px 18px}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+h1,h2,h3,.date,.formal,footer{font-family:'Cormorant Garamond',Georgia,serif}
+.hero{
+  background:
+    linear-gradient(90deg,rgba(247,241,231,.94),rgba(247,241,231,.70)),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1800&q=88') center/cover no-repeat;
+}
+.real-flower{
+  position:absolute;
+  z-index:2;
+  width:min(30vw,340px);
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:50%;
+  border:8px solid rgba(255,253,248,.82);
+  box-shadow:0 22px 60px rgba(40,55,44,.18);
+  animation:float 7s ease-in-out infinite;
+}
+.real-flower.left-real{left:-90px;bottom:-70px}
+.real-flower.right-real{right:-100px;top:70px;animation-delay:-3s}
+.photo-band{
+  min-height:420px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:white;
+  background:
+    linear-gradient(rgba(34,50,39,.42),rgba(34,50,39,.42)),
+    url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1800&q=88') center/cover no-repeat;
+}
+.photo-band blockquote{
+  max-width:760px;
+  margin:0;
+  padding:30px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(2.2rem,5vw,4rem);
+  line-height:1.05;
+  font-style:italic;
+  text-shadow:0 3px 25px rgba(0,0,0,.25);
+}
+@media(max-width:720px){
+  .real-flower.left-real{width:205px;left:-100px;bottom:-55px}
+  .real-flower.right-real{width:175px;right:-95px;top:80px}
+  .photo-band{min-height:340px}
+}
+</style>
 </head>
 <body>
 <nav><div class="inner"><a href="#boda">La boda</a><a href="#programa">Programa</a><a href="#dress">Dress code</a><a href="#hoteles">Hoteles</a><a href="#regalo">Regalo</a><a href="#confirmar">Confirmar</a></div></nav>
 <header class="hero">
+<img class="real-flower left-real" alt="" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=700&q=88">
+<img class="real-flower right-real" alt="" src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=88">
 <svg class="flower left" viewBox="0 0 360 460" aria-hidden="true"><path d="M170 455C176 330 174 222 186 112" stroke="#526b57" stroke-width="7" fill="none"/><path d="M176 298C112 292 72 323 39 382C100 389 148 366 179 330" stroke="#81927f" stroke-width="6" fill="none"/><path d="M181 228C234 209 270 170 289 114C231 123 195 153 181 196" stroke="#81927f" stroke-width="6" fill="none"/><g transform="translate(183 92)"><path d="M0 0C-86-31-115-103-89-159C-27-137 5-86 0-16" fill="#efe0d2" stroke="#b89461" stroke-width="7"/><path d="M0 0C36-87 102-111 157-84C132-25 78 5 13 0" fill="#f7eadf" stroke="#b89461" stroke-width="7"/><path d="M0 0C86 31 111 96 83 154C25 130-5 77 0 14" fill="#efe0d2" stroke="#b89461" stroke-width="7"/><path d="M0 0C-37 83-102 105-157 79C-132 22-77-7-13 0" fill="#f7eadf" stroke="#b89461" stroke-width="7"/><circle r="28" fill="#d8b67a" stroke="#b89461" stroke-width="7"/></g></svg>
 <svg class="flower right" viewBox="0 0 360 460" aria-hidden="true"><path d="M170 455C176 330 174 222 186 112" stroke="#526b57" stroke-width="7" fill="none"/><path d="M176 298C112 292 72 323 39 382C100 389 148 366 179 330" stroke="#81927f" stroke-width="6" fill="none"/><g transform="translate(183 150) scale(.75)"><path d="M0 0C-86-31-115-103-89-159C-27-137 5-86 0-16" fill="#efe0d2" stroke="#b89461" stroke-width="7"/><path d="M0 0C36-87 102-111 157-84C132-25 78 5 13 0" fill="#f7eadf" stroke="#b89461" stroke-width="7"/><path d="M0 0C86 31 111 96 83 154C25 130-5 77 0 14" fill="#efe0d2" stroke="#b89461" stroke-width="7"/><path d="M0 0C-37 83-102 105-157 79C-132 22-77-7-13 0" fill="#f7eadf" stroke="#b89461" stroke-width="7"/><circle r="28" fill="#d8b67a" stroke="#b89461" stroke-width="7"/></g></svg>
-<div class="hero-card"><div class="eyebrow">Nos casamos</div><h1>David <span class="amp">&</span> Estrella</h1><div class="date">3 de octubre de 2027</div><div class="place">Finca La Torreta · Sant Joan d'Alacant</div><a class="scroll" href="#boda">Descubre nuestra boda</a></div>
+<div class="hero-card"><div class="eyebrow">Nos casamos</div><h1>David <span class="amp">&</span> Estrella</h1><div class="date">3 de octubre de 2026</div><div class="place">Finca La Torreta · Sant Joan d'Alacant</div><a class="scroll" href="#boda">Descubre nuestra boda</a></div>
 </header>
 <main>
-<section id="boda"><div class="wrap"><div class="section-title"><span>Nuestro gran día</span><h2>La celebración</h2><div class="divider">✦</div></div><p class="intro">Nos hace muchísima ilusión compartir este día con vosotros. Queremos que sea una celebración elegante, cercana y llena de buenos momentos.</p><div class="grid" style="margin-top:38px"><article class="card"><div class="icon">💍</div><h3>Ceremonia y celebración</h3><p><strong>Finca La Torreta</strong></p><p>Avenida de Elda, 5<br>03550 Sant Joan d'Alacant, Alicante</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Finca+La+Torreta+Avenida+de+Elda+5+Sant+Joan+d%27Alacant">Ver en Google Maps</a></article><article class="card"><div class="icon">📅</div><h3>Fecha</h3><p><strong>Domingo, 3 de octubre de 2027</strong></p><p>Próximamente indicaremos la hora definitiva de llegada.</p></article></div></div></section>
+<section id="boda"><div class="wrap"><div class="section-title"><span>Nuestro gran día</span><h2>La celebración</h2><div class="divider">✦</div></div><p class="intro">Nos hace muchísima ilusión compartir este día con vosotros. Queremos que sea una celebración elegante, cercana y llena de buenos momentos.</p><div class="grid" style="margin-top:38px"><article class="card"><div class="icon">💍</div><h3>Ceremonia y celebración</h3><p><strong>Finca La Torreta</strong></p><p>Avenida de Elda, 5<br>03550 Sant Joan d'Alacant, Alicante</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Finca+La+Torreta+Avenida+de+Elda+5+Sant+Joan+d%27Alacant">Ver en Google Maps</a></article><article class="card"><div class="icon">📅</div><h3>Fecha</h3><p><strong>Domingo, 3 de octubre de 2026</strong></p><p>Próximamente indicaremos la hora definitiva de llegada.</p></article></div></div></section>
+<section class="photo-band" aria-label="Decoración floral">
+  <blockquote>“El comienzo de nuestro para siempre.”</blockquote>
+</section>
 <section id="programa"><div class="wrap"><div class="section-title"><span>Todo en un mismo lugar</span><h2>Programa</h2><div class="divider">✦</div></div><div class="timeline"><div class="event"><time>—:—</time><div><strong>Recepción de invitados</strong><p>Llegada a Finca La Torreta.</p></div></div><div class="event"><time>—:—</time><div><strong>Ceremonia</strong><p>Comienza nuestro “sí, quiero”.</p></div></div><div class="event"><time>—:—</time><div><strong>Cóctel y banquete</strong><p>Brindis, cena y celebración.</p></div></div><div class="event"><time>—:—</time><div><strong>Fiesta</strong><p>Música, baile y muchas ganas de pasarlo bien.</p></div></div></div></div></section>
 <section id="dress"><div class="wrap dress"><div class="section-title"><span>Cómo venir</span><h2>Dress code</h2><div class="divider">✦</div></div><div class="dress-icons"><svg viewBox="0 0 120 160" aria-label="Traje"><path d="M38 18L20 35l14 29 9-9v82h34V55l9 9 14-29-18-17-12 15H50z"/><path d="M50 33l10 16 10-16M60 49v31M48 137v17M72 137v17"/></svg><svg viewBox="0 0 120 160" aria-label="Vestido"><path d="M49 18h22l-4 30 28 88H25l28-88z"/><path d="M49 18l11 15 11-15M53 48h14M25 136h70"/></svg></div><div class="formal">Formal</div></div></section>
 <section id="hoteles"><div class="wrap"><div class="section-title"><span>Para descansar cerca</span><h2>Alojamiento</h2><div class="divider">✦</div></div><div class="grid"><article class="card"><h3>Hotel Alicante Golf</h3><p>Hotel de 4 estrellas en Playa de San Juan.</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel+Alicante+Golf">Ver en Google Maps</a></article><article class="card"><h3>Port Alicante City & Beach</h3><p>Hotel de 4 estrellas cercano a Playa de San Juan.</p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Port+Alicante+City+%26+Beach">Ver en Google Maps</a></article></div></div></section>
 <section id="regalo"><div class="wrap gift"><div class="section-title"><span>Lo más importante es compartirlo</span><h2>Regalo</h2><div class="divider">✦</div></div><p>Vuestra presencia es nuestro mejor regalo. Para quienes quieran ayudarnos a comenzar esta nueva etapa, dejaremos aquí nuestro número de cuenta.</p><div class="iban">ES00 0000 0000 0000 0000 0000</div><p class="note">Número provisional. Sustituiremos este texto por el IBAN definitivo.</p></div></section>
 <section id="confirmar"><div class="wrap"><div class="section-title"><span>Te esperamos</span><h2>Confirma tu asistencia</h2><div class="divider">✦</div></div><form id="rsvp"><div class="field"><label for="nombre">Nombre y apellidos</label><input id="nombre" name="nombre" required></div><div class="field"><label for="asistencia">¿Podrás acompañarnos?</label><select id="asistencia" name="asistencia" required><option value="">Selecciona una opción</option><option value="Sí">Sí, allí estaré</option><option value="No">No podré asistir</option></select></div><div class="field"><label for="acompanantes">Número total de asistentes</label><input id="acompanantes" name="acompanantes" type="number" min="1" value="1"></div><div class="field"><label for="alergias">Alergias, intolerancias o menú especial</label><textarea id="alergias" name="alergias" placeholder="Déjalo en blanco si no hay ninguna"></textarea></div><button type="submit">Enviar confirmación</button><div class="status" id="status"></div></form></div></section>
-</main><footer>David & Estrella · 3 de octubre de 2027</footer>
+</main><footer>David & Estrella · 3 de octubre de 2026</footer>
 <script>
 const FORM_URL='https://script.google.com/macros/s/AKfycbwsAvykXVlYEHh8Ym5lpokUaJA0kL4E53Xu5JFXNGP60aWqMSwBIPOA0jKNqOTf8M05/exec';
 const form=document.getElementById('rsvp');const statusEl=document.getElementById('status');
