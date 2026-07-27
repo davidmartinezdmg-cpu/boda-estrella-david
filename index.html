@@ -36,6 +36,21 @@ form{max-width:760px;margin:auto;display:grid;gap:17px}.field{display:grid;gap:7
 footer{text-align:center;padding:50px 20px 70px;color:var(--green);font-size:1.1rem}
 .divider{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--green2);margin:5px 0 0}.divider:before,.divider:after{content:"";height:1px;width:90px;background:var(--line)}
 @media(max-width:720px){nav .inner{gap:12px}nav a{font-size:.7rem}.grid{grid-template-columns:1fr}.hero{min-height:88vh}.flower.left{width:58vw;left:-90px;top:35px}.flower.right{width:48vw;right:-95px;bottom:25px}.event{grid-template-columns:82px 1fr}.dress-icons{gap:35px}.dress-icons svg{width:95px;height:135px}section{padding:68px 18px}}
+
+.music-control{
+  position:fixed; right:18px; bottom:18px; z-index:1000;
+  display:flex; align-items:center; gap:9px; padding:11px 15px;
+  border:1px solid rgba(82,107,87,.35); border-radius:999px;
+  background:rgba(255,253,248,.94); color:var(--green);
+  box-shadow:0 10px 35px rgba(47,52,47,.15); backdrop-filter:blur(10px);
+  font:500 .76rem Montserrat,Arial,sans-serif; letter-spacing:.04em;
+  cursor:pointer;
+}
+.music-control:hover{transform:translateY(-2px)}
+.music-control .music-icon{font-size:1rem; line-height:1}
+#ytMusic{position:fixed;width:1px;height:1px;left:-9999px;bottom:-9999px;opacity:0;pointer-events:none}
+@media(max-width:600px){.music-control{right:12px;bottom:12px;padding:10px 13px}.music-label{display:none}}
+
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,5 +126,54 @@ h1,h2,h3,.date,.formal,footer{font-family:'Cormorant Garamond',Georgia,serif}
 const FORM_URL='https://script.google.com/macros/s/AKfycbwsAvykXVlYEHh8Ym5lpokUaJA0kL4E53Xu5JFXNGP60aWqMSwBIPOA0jKNqOTf8M05/exec';
 const form=document.getElementById('rsvp');const statusEl=document.getElementById('status');
 form.addEventListener('submit',async(e)=>{e.preventDefault();statusEl.textContent='Enviando...';const data=new FormData(form);try{await fetch(FORM_URL,{method:'POST',body:data,mode:'no-cors'});statusEl.textContent='¡Gracias! Hemos recibido tu confirmación.';form.reset();}catch(err){statusEl.textContent='No se ha podido enviar. Inténtalo de nuevo en unos segundos.';}});
+</script>
+
+<div id="ytMusic" aria-hidden="true"></div>
+<button id="musicControl" class="music-control" type="button" aria-label="Pausar o reproducir la música">
+  <span class="music-icon" id="musicIcon">♫</span>
+  <span class="music-label" id="musicLabel">Cargando música…</span>
+</button>
+
+<script>
+let musicPlayer;
+let musicReady=false;
+const musicButton=document.getElementById('musicControl');
+const musicLabel=document.getElementById('musicLabel');
+const musicIcon=document.getElementById('musicIcon');
+
+function setMusicButton(state){
+  if(state===YT.PlayerState.PLAYING){
+    musicLabel.textContent='Pausar música';
+    musicIcon.textContent='❚❚';
+  }else{
+    musicLabel.textContent='Activar música';
+    musicIcon.textContent='♫';
+  }
+}
+window.onYouTubeIframeAPIReady=function(){
+  musicPlayer=new YT.Player('ytMusic',{
+    height:'1',width:'1',videoId:'xdI_3GdLt8g',
+    playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,loop:1,playlist:'xdI_3GdLt8g',modestbranding:1,playsinline:1,rel:0},
+    events:{
+      onReady:function(event){
+        musicReady=true;
+        event.target.setVolume(35);
+        event.target.playVideo();
+        setTimeout(function(){
+          if(event.target.getPlayerState()!==YT.PlayerState.PLAYING){setMusicButton(YT.PlayerState.PAUSED)}
+        },1200);
+      },
+      onStateChange:function(event){setMusicButton(event.data)}
+    }
+  });
+};
+musicButton.addEventListener('click',function(){
+  if(!musicReady||!musicPlayer)return;
+  const state=musicPlayer.getPlayerState();
+  if(state===YT.PlayerState.PLAYING){musicPlayer.pauseVideo()}else{musicPlayer.playVideo()}
+});
+const ytApi=document.createElement('script');
+ytApi.src='https://www.youtube.com/iframe_api';
+document.head.appendChild(ytApi);
 </script>
 </body></html>
