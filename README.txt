@@ -1,0 +1,1 @@
+Invitación de boda de David y Estrella. Subir index.html a GitHub Pages. La URL de Apps Script incluida es la implementación final vinculada al Google Sheets. La música se inicia al pulsar “Abrir invitación” para cumplir las restricciones de los navegadores móviles.
