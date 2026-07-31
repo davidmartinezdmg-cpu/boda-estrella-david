@@ -1,4 +1,4 @@
-INVITACIÓN DAVID & ESTRELLA — V5 HORARIOS
+INVITACIÓN DAVID & ESTRELLA — V7 FOTOS, HORARIOS Y REGALO
 
 Para GitHub Pages:
 1. Descomprime el ZIP.
@@ -7,7 +7,8 @@ Para GitHub Pages:
 
 Cambios:
 - Eliminadas las líneas/marco decorativo de la portada alrededor de David & Estrella.
-- Añadido el apartado “El día de la boda” con Ceremonia, Cóctel, Banquete, Tarta y brindis y Fiesta.
-- Todos los horarios aparecen como “Hora por confirmar”, listos para sustituir.
+- Añadidas las dos fotografías de David y Estrella en los marcos superiores.
+- Horarios definitivos: Ceremonia 13:00, Cóctel 14:00, Comida 15:30 y Fiesta 17:00.
+- Añadido el texto definitivo del regalo y el IBAN facilitado.
 - Añadido “Horarios” al menú.
 - Se mantiene la conexión existente con Google Sheets y el correo.
