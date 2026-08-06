@@ -59,13 +59,15 @@ const form=document.getElementById('rsvp'),statusEl=document.getElementById('sta
 form.addEventListener('submit',async e=>{e.preventDefault();statusEl.textContent='Enviando...';const data=new FormData(form);try{await fetch(FORM_URL,{method:'POST',body:data,mode:'no-cors'});statusEl.textContent='¡Gracias! Tu confirmación ha sido enviada.';form.reset()}catch(err){statusEl.textContent='No se ha podido enviar. Inténtalo de nuevo.'}});
 let player=null,ready=false,wantsMusic=false,isPlaying=false;const control=document.getElementById('musicControl');
 function setMusicLabel(){control.textContent=isPlaying?'❚❚ Pausar música':'▶ Reproducir música';control.setAttribute('aria-pressed',String(isPlaying));}
-window.onYouTubeIframeAPIReady=()=>{player=new YT.Player('ytMusic',{height:'1',width:'1',videoId:'xdI_3GdLt8g',playerVars:{autoplay:0,controls:0,loop:1,playlist:'xdI_3GdLt8g',playsinline:1,rel:0,origin:location.origin},events:{onReady:e=>{ready=true;e.target.setVolume(35);if(wantsMusic)e.target.playVideo();},onStateChange:e=>{isPlaying=e.data===YT.PlayerState.PLAYING;setMusicLabel();}}})};
+window.onYouTubeIframeAPIReady=()=>{player=new YT.Player('ytMusic',{height:'1',width:'1',videoId:'xdI_3GdLt8g',playerVars:{autoplay:0,controls:0,loop:1,playlist:'xdI_3GdLt8g',playsinline:1,rel:0},events:{onReady:e=>{ready=true;e.target.setVolume(35);if(wantsMusic)e.target.playVideo();},onStateChange:e=>{isPlaying=e.data===YT.PlayerState.PLAYING;setMusicLabel();}}})};
 function startMusic(){wantsMusic=true;if(ready&&player){player.playVideo();isPlaying=true;setMusicLabel();}}
-document.getElementById('enterBtn').addEventListener('click',()=>{document.getElementById('enterScreen').classList.add('hidden');sessionStorage.setItem('weddingOpened','1');startMusic();});
-if(sessionStorage.getItem('weddingOpened')==='1'){document.getElementById('enterScreen').classList.add('hidden');}
+const enterScreen=document.getElementById('enterScreen');
+document.getElementById('enterBtn').addEventListener('click',()=>{enterScreen.classList.add('hidden');try{sessionStorage.setItem('weddingOpened','1')}catch(e){}startMusic();});
+try{if(sessionStorage.getItem('weddingOpened')==='1')enterScreen.classList.add('hidden')}catch(e){}
 control.addEventListener('click',()=>{wantsMusic=true;if(!ready||!player){setMusicLabel();return;}const state=player.getPlayerState();if(state===YT.PlayerState.PLAYING){player.pauseVideo();isPlaying=false;}else{player.playVideo();isPlaying=true;}setMusicLabel();});
 setMusicLabel();
-function updateCountdown(){const target=new Date('2026-10-03T13:00:00+02:00').getTime();const diff=Math.max(0,target-Date.now());days.textContent=Math.floor(diff/86400000);hours.textContent=Math.floor(diff%86400000/3600000);minutes.textContent=Math.floor(diff%3600000/60000);seconds.textContent=Math.floor(diff%60000/1000)}updateCountdown();setInterval(updateCountdown,1000);
+const daysEl=document.getElementById('days'),hoursEl=document.getElementById('hours'),minutesEl=document.getElementById('minutes'),secondsEl=document.getElementById('seconds');
+function updateCountdown(){const target=new Date('2026-10-03T13:00:00+02:00').getTime();const diff=Math.max(0,target-Date.now());daysEl.textContent=Math.floor(diff/86400000);hoursEl.textContent=Math.floor(diff%86400000/3600000);minutesEl.textContent=Math.floor(diff%3600000/60000);secondsEl.textContent=Math.floor(diff%60000/1000)}updateCountdown();setInterval(updateCountdown,1000);
 const api=document.createElement('script');api.src='https://www.youtube.com/iframe_api';document.head.appendChild(api);
 </script>
 </body>
