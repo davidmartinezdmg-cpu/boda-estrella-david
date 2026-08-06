@@ -1,4 +1,4 @@
-INVITACIÓN DAVID & ESTRELLA — V12 FINAL SIN RAYAS
+INVITACIÓN DAVID & ESTRELLA — V13 RAYA ELIMINADA DEL PNG
 
 Para GitHub Pages:
 1. Descomprime el ZIP.
@@ -15,6 +15,7 @@ Cambios:
 - Recuperados Ceremonia, Cóctel, Comida y Fiesta; solo Ceremonia muestra la hora 13:00.
 - Revisadas las rutas, el JavaScript y la compatibilidad con GitHub Pages.
 - Eliminada la raya verde izquierda tanto en la pantalla de apertura como en la portada interior.
+- La franja verde ha sido borrada físicamente del archivo floral y ambas pantallas usan la imagen limpia.
 - Horarios definitivos: Ceremonia 13:00, Cóctel 14:00, Comida 15:30 y Fiesta 17:00.
 - Añadido el texto definitivo del regalo y el IBAN facilitado.
 - Añadido “Horarios” al menú.
